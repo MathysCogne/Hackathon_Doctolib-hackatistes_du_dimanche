@@ -1,0 +1,13 @@
+
+
+lancer la MongoDB
+mongod --dbpath MongoDB
+
+
+GET
+curl http://localhost:3000/eliza/4567e123-e89b-12d3-a456-426614174000
+
+POST
+curl -X POST http://localhost:3000/eliza/4567e123-e89b-12d3-a456-426614174000 \
+     -H "Content-Type: application/json" \
+     -d '{"name": "jane", "accident": "malaise vagale", "location": "marseille", "priority": "4"}'

@@ -1,0 +1,4513 @@
+.
+├── back
+│   ├── commande
+│   ├── mongod.log
+│   ├── package.json
+│   ├── package-lock.json
+│   └── src
+│       ├── app.js
+│       ├── client.js
+│       ├── config
+│       │   └── db.js
+│       ├── controllers
+│       │   └── elizaController.js
+│       ├── middlewares
+│       │   └── authMiddleware.js
+│       └── routes
+│           └── elizaRoutes.js
+├── ElisaOs
+│   ├── agent
+│   │   ├── jest.config.js
+│   │   ├── package.json
+│   │   ├── src
+│   │   │   └── index.ts
+│   │   └── tsconfig.json
+│   ├── biome.json
+│   ├── CHANGELOG.md
+│   ├── characters
+│   │   └── first_help.json
+│   ├── client
+│   │   ├── components.json
+│   │   ├── index.html
+│   │   ├── package.json
+│   │   ├── pnpm-lock.yaml
+│   │   ├── postcss.config.js
+│   │   ├── public
+│   │   │   ├── elizaos-icon.png
+│   │   │   └── elizaos.webp
+│   │   ├── README.md
+│   │   ├── src
+│   │   │   ├── App.tsx
+│   │   │   ├── components
+│   │   │   │   ├── app-sidebar.tsx
+│   │   │   │   ├── array-input.tsx
+│   │   │   │   ├── audio-recorder.tsx
+│   │   │   │   ├── chat.tsx
+│   │   │   │   ├── connection-status.tsx
+│   │   │   │   ├── copy-button.tsx
+│   │   │   │   ├── input-copy.tsx
+│   │   │   │   ├── overview.tsx
+│   │   │   │   ├── page-title.tsx
+│   │   │   │   └── ui
+│   │   │   │       ├── avatar.tsx
+│   │   │   │       ├── badge.tsx
+│   │   │   │       ├── breadcrumb.tsx
+│   │   │   │       ├── button.tsx
+│   │   │   │       ├── card.tsx
+│   │   │   │       ├── chat
+│   │   │   │       │   ├── chat-bubble.tsx
+│   │   │   │       │   ├── chat-input.tsx
+│   │   │   │       │   ├── chat-message-list.tsx
+│   │   │   │       │   ├── chat-tts-button.tsx
+│   │   │   │       │   ├── expandable-chat.tsx
+│   │   │   │       │   ├── hooks
+│   │   │   │       │   │   └── useAutoScroll.tsx
+│   │   │   │       │   └── message-loading.tsx
+│   │   │   │       ├── collapsible.tsx
+│   │   │   │       ├── input.tsx
+│   │   │   │       ├── label.tsx
+│   │   │   │       ├── separator.tsx
+│   │   │   │       ├── sheet.tsx
+│   │   │   │       ├── sidebar.tsx
+│   │   │   │       ├── skeleton.tsx
+│   │   │   │       ├── tabs.tsx
+│   │   │   │       ├── textarea.tsx
+│   │   │   │       ├── toaster.tsx
+│   │   │   │       ├── toast.tsx
+│   │   │   │       └── tooltip.tsx
+│   │   │   ├── hooks
+│   │   │   │   ├── use-mobile.tsx
+│   │   │   │   ├── use-toast.ts
+│   │   │   │   └── use-version.tsx
+│   │   │   ├── index.css
+│   │   │   ├── lib
+│   │   │   │   ├── api.ts
+│   │   │   │   ├── info.json
+│   │   │   │   └── utils.ts
+│   │   │   ├── main.tsx
+│   │   │   ├── routes
+│   │   │   │   ├── chat.tsx
+│   │   │   │   ├── home.tsx
+│   │   │   │   └── overview.tsx
+│   │   │   ├── types
+│   │   │   │   └── index.ts
+│   │   │   ├── types.ts
+│   │   │   └── vite-env.d.ts
+│   │   ├── tailwind.config.ts
+│   │   ├── tsconfig.app.json
+│   │   ├── tsconfig.json
+│   │   ├── tsconfig.node.json
+│   │   ├── version.cmd
+│   │   ├── version.sh
+│   │   └── vite.config.ts
+│   ├── codecov.yml
+│   ├── CODE_OF_CONDUCT.md
+│   ├── commitlint.config.js
+│   ├── CONTRIBUTING.md
+│   ├── docker-compose-docs.yaml
+│   ├── docker-compose.yaml
+│   ├── Dockerfile
+│   ├── Dockerfile.docs
+│   ├── docs
+│   │   ├── api
+│   │   │   ├── classes
+│   │   │   │   ├── AgentRuntime.md
+│   │   │   │   ├── CacheManager.md
+│   │   │   │   ├── DatabaseAdapter.md
+│   │   │   │   ├── DbCacheAdapter.md
+│   │   │   │   ├── FsCacheAdapter.md
+│   │   │   │   ├── MemoryCacheAdapter.md
+│   │   │   │   ├── MemoryManager.md
+│   │   │   │   └── Service.md
+│   │   │   ├── enumerations
+│   │   │   │   ├── CacheStore.md
+│   │   │   │   ├── Clients.md
+│   │   │   │   ├── GoalStatus.md
+│   │   │   │   ├── LoggingLevel.md
+│   │   │   │   ├── ModelClass.md
+│   │   │   │   ├── ModelProviderName.md
+│   │   │   │   ├── ServiceType.md
+│   │   │   │   ├── TokenizerType.md
+│   │   │   │   └── TranscriptionProvider.md
+│   │   │   ├── functions
+│   │   │   │   ├── addHeader.md
+│   │   │   │   ├── composeActionExamples.md
+│   │   │   │   ├── composeContext.md
+│   │   │   │   ├── composeRandomUser.md
+│   │   │   │   ├── configureSettings.md
+│   │   │   │   ├── createGoal.md
+│   │   │   │   ├── createRelationship.md
+│   │   │   │   ├── embed.md
+│   │   │   │   ├── findNearestEnvFile.md
+│   │   │   │   ├── formatActionNames.md
+│   │   │   │   ├── formatActions.md
+│   │   │   │   ├── formatActors.md
+│   │   │   │   ├── formatEvaluatorExampleDescriptions.md
+│   │   │   │   ├── formatEvaluatorExamples.md
+│   │   │   │   ├── formatEvaluatorNames.md
+│   │   │   │   ├── formatEvaluators.md
+│   │   │   │   ├── formatGoalsAsString.md
+│   │   │   │   ├── formatMessages.md
+│   │   │   │   ├── formatPosts.md
+│   │   │   │   ├── formatRelationships.md
+│   │   │   │   ├── formatTimestamp.md
+│   │   │   │   ├── generateCaption.md
+│   │   │   │   ├── generateImage.md
+│   │   │   │   ├── generateMessageResponse.md
+│   │   │   │   ├── generateObjectArray.md
+│   │   │   │   ├── generateObjectDeprecated.md
+│   │   │   │   ├── generateObject.md
+│   │   │   │   ├── generateShouldRespond.md
+│   │   │   │   ├── generateTextArray.md
+│   │   │   │   ├── generateText.md
+│   │   │   │   ├── generateTrueOrFalse.md
+│   │   │   │   ├── generateTweetActions.md
+│   │   │   │   ├── generateWebSearch.md
+│   │   │   │   ├── getActorDetails.md
+│   │   │   │   ├── getEmbeddingConfig.md
+│   │   │   │   ├── getEmbeddingType.md
+│   │   │   │   ├── getEmbeddingZeroVector.md
+│   │   │   │   ├── getEndpoint.md
+│   │   │   │   ├── getEnvVariable.md
+│   │   │   │   ├── getGoals.md
+│   │   │   │   ├── getModel.md
+│   │   │   │   ├── getProviders.md
+│   │   │   │   ├── getRelationship.md
+│   │   │   │   ├── getRelationships.md
+│   │   │   │   ├── handleProvider.md
+│   │   │   │   ├── hasEnvVariable.md
+│   │   │   │   ├── loadEnvConfig.md
+│   │   │   │   ├── parseActionResponseFromText.md
+│   │   │   │   ├── parseBooleanFromText.md
+│   │   │   │   ├── parseJsonArrayFromText.md
+│   │   │   │   ├── parseJSONObjectFromText.md
+│   │   │   │   ├── parseShouldRespondFromText.md
+│   │   │   │   ├── splitChunks.md
+│   │   │   │   ├── stringToUuid.md
+│   │   │   │   ├── trimTokens.md
+│   │   │   │   ├── updateGoal.md
+│   │   │   │   ├── validateCharacterConfig.md
+│   │   │   │   └── validateEnv.md
+│   │   │   ├── index.md
+│   │   │   ├── interfaces
+│   │   │   │   ├── Account.md
+│   │   │   │   ├── ActionExample.md
+│   │   │   │   ├── Action.md
+│   │   │   │   ├── ActionResponse.md
+│   │   │   │   ├── Actor.md
+│   │   │   │   ├── Content.md
+│   │   │   │   ├── ConversationExample.md
+│   │   │   │   ├── EvaluationExample.md
+│   │   │   │   ├── Evaluator.md
+│   │   │   │   ├── GenerationOptions.md
+│   │   │   │   ├── Goal.md
+│   │   │   │   ├── IAgentConfig.md
+│   │   │   │   ├── IAgentRuntime.md
+│   │   │   │   ├── IAwsS3Service.md
+│   │   │   │   ├── IBrowserService.md
+│   │   │   │   ├── ICacheAdapter.md
+│   │   │   │   ├── ICacheManager.md
+│   │   │   │   ├── IDatabaseAdapter.md
+│   │   │   │   ├── IDatabaseCacheAdapter.md
+│   │   │   │   ├── IImageDescriptionService.md
+│   │   │   │   ├── IMemoryManager.md
+│   │   │   │   ├── IPdfService.md
+│   │   │   │   ├── ISlackService.md
+│   │   │   │   ├── ISpeechService.md
+│   │   │   │   ├── ITextGenerationService.md
+│   │   │   │   ├── ITranscriptionService.md
+│   │   │   │   ├── IVideoService.md
+│   │   │   │   ├── Memory.md
+│   │   │   │   ├── MessageExample.md
+│   │   │   │   ├── ModelConfiguration.md
+│   │   │   │   ├── Objective.md
+│   │   │   │   ├── Participant.md
+│   │   │   │   ├── Provider.md
+│   │   │   │   ├── Relationship.md
+│   │   │   │   ├── Room.md
+│   │   │   │   └── State.md
+│   │   │   ├── type-aliases
+│   │   │   │   ├── CacheOptions.md
+│   │   │   │   ├── CharacterConfig.md
+│   │   │   │   ├── Character.md
+│   │   │   │   ├── Client.md
+│   │   │   │   ├── EmbeddingConfig.md
+│   │   │   │   ├── EmbeddingProviderType.md
+│   │   │   │   ├── EnvConfig.md
+│   │   │   │   ├── HandlerCallback.md
+│   │   │   │   ├── Handler.md
+│   │   │   │   ├── KnowledgeItem.md
+│   │   │   │   ├── Media.md
+│   │   │   │   ├── Model.md
+│   │   │   │   ├── Models.md
+│   │   │   │   ├── Plugin.md
+│   │   │   │   ├── SearchImage.md
+│   │   │   │   ├── SearchResponse.md
+│   │   │   │   ├── SearchResult.md
+│   │   │   │   ├── TelemetrySettings.md
+│   │   │   │   ├── UUID.md
+│   │   │   │   └── Validator.md
+│   │   │   ├── typedoc-sidebar.cjs
+│   │   │   └── variables
+│   │   │       ├── booleanFooter.md
+│   │   │       ├── CharacterSchema.md
+│   │   │       ├── defaultCharacter.md
+│   │   │       ├── elizaLogger.md
+│   │   │       ├── EmbeddingProvider.md
+│   │   │       ├── envSchema.md
+│   │   │       ├── evaluationTemplate.md
+│   │   │       ├── knowledge.md
+│   │   │       ├── messageCompletionFooter.md
+│   │   │       ├── models.md
+│   │   │       ├── postActionResponseFooter.md
+│   │   │       ├── settings.md
+│   │   │       ├── shouldRespondFooter.md
+│   │   │       └── stringArrayFooter.md
+│   │   ├── babel.config.js
+│   │   ├── backup-sidebars-community.js
+│   │   ├── community
+│   │   │   ├── ai16z
+│   │   │   │   ├── degenai
+│   │   │   │   │   └── index.md
+│   │   │   │   ├── index.md
+│   │   │   │   └── pmairca
+│   │   │   │       └── index.md
+│   │   │   ├── ai-dev-school
+│   │   │   │   ├── index.md
+│   │   │   │   ├── nader_tutorial_10min.md
+│   │   │   │   ├── nader_tutorial_15min.md
+│   │   │   │   ├── part1.md
+│   │   │   │   ├── part2.md
+│   │   │   │   └── part3.md
+│   │   │   ├── awesome-eliza.md
+│   │   │   ├── components
+│   │   │   │   ├── Accordion.tsx
+│   │   │   │   ├── Contributions.tsx
+│   │   │   │   ├── Contributors.tsx
+│   │   │   │   ├── Contributor.tsx
+│   │   │   │   ├── Hero.tsx
+│   │   │   │   ├── ScoreIcon.tsx
+│   │   │   │   ├── StatCard.tsx
+│   │   │   │   ├── Summary.tsx
+│   │   │   │   └── utils.tsx
+│   │   │   ├── Contributors
+│   │   │   │   ├── eliza-council.md
+│   │   │   │   ├── index.md
+│   │   │   │   ├── inspiration.md
+│   │   │   │   ├── profiles.mdx
+│   │   │   │   └── weekly-contributor-meeting
+│   │   │   │       ├── 2024-12-10.md
+│   │   │   │       ├── 2024-12-31.md
+│   │   │   │       ├── 2025-01-07.md
+│   │   │   │       ├── 2025-01-14.md
+│   │   │   │       ├── 2025-01-21.md
+│   │   │   │       └── 2025-01-28.md
+│   │   │   ├── creator-fund.md
+│   │   │   ├── Discord
+│   │   │   │   ├── collaborations
+│   │   │   │   │   └── 3d-ai-tv
+│   │   │   │   │       ├── chat_2024-12-02.md
+│   │   │   │   │       ├── chat_2024-12-03.md
+│   │   │   │   │       ├── chat_2024-12-04.md
+│   │   │   │   │       ├── chat_2024-12-05.md
+│   │   │   │   │       ├── chat_2024-12-06.md
+│   │   │   │   │       ├── chat_2024-12-07.md
+│   │   │   │   │       ├── chat_2024-12-08.md
+│   │   │   │   │       └── chat_2024-12-09.md
+│   │   │   │   ├── development
+│   │   │   │   │   ├── agent-dev-school
+│   │   │   │   │   │   ├── chat_2024-11-28.md
+│   │   │   │   │   │   ├── chat_2024-11-29.md
+│   │   │   │   │   │   ├── chat_2024-11-30.md
+│   │   │   │   │   │   ├── chat_2024-12-01.md
+│   │   │   │   │   │   ├── chat_2024-12-02.md
+│   │   │   │   │   │   ├── chat_2024-12-03.md
+│   │   │   │   │   │   ├── chat_2024-12-04.md
+│   │   │   │   │   │   ├── chat_2024-12-05.md
+│   │   │   │   │   │   ├── chat_2024-12-06.md
+│   │   │   │   │   │   ├── chat_2024-12-07.md
+│   │   │   │   │   │   ├── chat_2024-12-08.md
+│   │   │   │   │   │   └── chat_2024-12-09.md
+│   │   │   │   │   ├── autonomous-hackathon
+│   │   │   │   │   │   ├── chat_2024-12-08.md
+│   │   │   │   │   │   └── chat_2024-12-09.md
+│   │   │   │   │   ├── coders
+│   │   │   │   │   │   ├── chat_2024-10-27.md
+│   │   │   │   │   │   ├── chat_2024-10-28.md
+│   │   │   │   │   │   ├── chat_2024-10-29.md
+│   │   │   │   │   │   ├── chat_2024-10-30.md
+│   │   │   │   │   │   ├── chat_2024-10-31.md
+│   │   │   │   │   │   ├── chat_2024-11-01.md
+│   │   │   │   │   │   ├── chat_2024-11-02.md
+│   │   │   │   │   │   ├── chat_2024-11-03.md
+│   │   │   │   │   │   ├── chat_2024-11-04.md
+│   │   │   │   │   │   ├── chat_2024-11-05.md
+│   │   │   │   │   │   ├── chat_2024-11-06.md
+│   │   │   │   │   │   ├── chat_2024-11-07.md
+│   │   │   │   │   │   ├── chat_2024-11-08.md
+│   │   │   │   │   │   ├── chat_2024-11-09.md
+│   │   │   │   │   │   ├── chat_2024-11-10.md
+│   │   │   │   │   │   ├── chat_2024-11-11.md
+│   │   │   │   │   │   ├── chat_2024-11-12.md
+│   │   │   │   │   │   ├── chat_2024-11-13.md
+│   │   │   │   │   │   ├── chat_2024-11-14.md
+│   │   │   │   │   │   ├── chat_2024-11-15.md
+│   │   │   │   │   │   ├── chat_2024-11-16.md
+│   │   │   │   │   │   ├── chat_2024-11-17.md
+│   │   │   │   │   │   ├── chat_2024-11-18.md
+│   │   │   │   │   │   ├── chat_2024-11-19.md
+│   │   │   │   │   │   ├── chat_2024-11-20.md
+│   │   │   │   │   │   ├── chat_2024-11-21.md
+│   │   │   │   │   │   ├── chat_2024-11-22.md
+│   │   │   │   │   │   ├── chat_2024-11-23.md
+│   │   │   │   │   │   ├── chat_2024-11-24.md
+│   │   │   │   │   │   ├── chat_2024-11-25.md
+│   │   │   │   │   │   ├── chat_2024-11-26.md
+│   │   │   │   │   │   ├── chat_2024-11-27.md
+│   │   │   │   │   │   ├── chat_2024-11-28.md
+│   │   │   │   │   │   ├── chat_2024-11-29.md
+│   │   │   │   │   │   ├── chat_2024-11-30.md
+│   │   │   │   │   │   ├── chat_2024-12-01.md
+│   │   │   │   │   │   ├── chat_2024-12-02.md
+│   │   │   │   │   │   ├── chat_2024-12-03.md
+│   │   │   │   │   │   ├── chat_2024-12-04.md
+│   │   │   │   │   │   ├── chat_2024-12-05.md
+│   │   │   │   │   │   ├── chat_2024-12-06.md
+│   │   │   │   │   │   ├── chat_2024-12-07.md
+│   │   │   │   │   │   ├── chat_2024-12-08.md
+│   │   │   │   │   │   └── chat_2024-12-09.md
+│   │   │   │   │   ├── dev-contributors
+│   │   │   │   │   │   ├── chat_2024-11-20.md
+│   │   │   │   │   │   ├── chat_2024-11-21.md
+│   │   │   │   │   │   ├── chat_2024-11-22.md
+│   │   │   │   │   │   ├── chat_2024-11-23.md
+│   │   │   │   │   │   ├── chat_2024-11-24.md
+│   │   │   │   │   │   ├── chat_2024-11-25.md
+│   │   │   │   │   │   ├── chat_2024-11-26.md
+│   │   │   │   │   │   ├── chat_2024-11-27.md
+│   │   │   │   │   │   ├── chat_2024-11-28.md
+│   │   │   │   │   │   ├── chat_2024-11-29.md
+│   │   │   │   │   │   ├── chat_2024-11-30.md
+│   │   │   │   │   │   ├── chat_2024-12-01.md
+│   │   │   │   │   │   ├── chat_2024-12-02.md
+│   │   │   │   │   │   ├── chat_2024-12-03.md
+│   │   │   │   │   │   ├── chat_2024-12-04.md
+│   │   │   │   │   │   ├── chat_2024-12-05.md
+│   │   │   │   │   │   ├── chat_2024-12-06.md
+│   │   │   │   │   │   ├── chat_2024-12-07.md
+│   │   │   │   │   │   ├── chat_2024-12-08.md
+│   │   │   │   │   │   └── chat_2024-12-09.md
+│   │   │   │   │   └── dev-vc
+│   │   │   │   │       ├── chat_2024-11-11.md
+│   │   │   │   │       ├── chat_2024-11-12.md
+│   │   │   │   │       ├── chat_2024-11-15.md
+│   │   │   │   │       ├── chat_2024-11-16.md
+│   │   │   │   │       ├── chat_2024-11-17.md
+│   │   │   │   │       ├── chat_2024-11-18.md
+│   │   │   │   │       ├── chat_2024-11-19.md
+│   │   │   │   │       ├── chat_2024-11-20.md
+│   │   │   │   │       ├── chat_2024-11-22.md
+│   │   │   │   │       ├── chat_2024-11-24.md
+│   │   │   │   │       ├── chat_2024-11-26.md
+│   │   │   │   │       ├── chat_2024-12-02.md
+│   │   │   │   │       ├── chat_2024-12-04.md
+│   │   │   │   │       └── chat_2024-12-09.md
+│   │   │   │   ├── index.md
+│   │   │   │   ├── the_arena
+│   │   │   │   │   ├── degenspartanai
+│   │   │   │   │   │   ├── chat_2024-11-18.md
+│   │   │   │   │   │   ├── chat_2024-11-19.md
+│   │   │   │   │   │   ├── chat_2024-11-20.md
+│   │   │   │   │   │   ├── chat_2024-11-21.md
+│   │   │   │   │   │   ├── chat_2024-11-22.md
+│   │   │   │   │   │   ├── chat_2024-11-23.md
+│   │   │   │   │   │   ├── chat_2024-11-24.md
+│   │   │   │   │   │   ├── chat_2024-11-25.md
+│   │   │   │   │   │   └── chat_2024-11-26.md
+│   │   │   │   │   ├── discussion
+│   │   │   │   │   │   ├── chat_2024-06-20.md
+│   │   │   │   │   │   ├── chat_2024-06-21.md
+│   │   │   │   │   │   ├── chat_2024-06-22.md
+│   │   │   │   │   │   ├── chat_2024-06-23.md
+│   │   │   │   │   │   ├── chat_2024-06-24.md
+│   │   │   │   │   │   ├── chat_2024-06-25.md
+│   │   │   │   │   │   ├── chat_2024-06-26.md
+│   │   │   │   │   │   ├── chat_2024-06-27.md
+│   │   │   │   │   │   ├── chat_2024-06-28.md
+│   │   │   │   │   │   ├── chat_2024-06-29.md
+│   │   │   │   │   │   ├── chat_2024-06-30.md
+│   │   │   │   │   │   ├── chat_2024-07-01.md
+│   │   │   │   │   │   ├── chat_2024-07-02.md
+│   │   │   │   │   │   ├── chat_2024-07-03.md
+│   │   │   │   │   │   ├── chat_2024-07-04.md
+│   │   │   │   │   │   ├── chat_2024-07-05.md
+│   │   │   │   │   │   ├── chat_2024-07-06.md
+│   │   │   │   │   │   ├── chat_2024-07-07.md
+│   │   │   │   │   │   ├── chat_2024-07-08.md
+│   │   │   │   │   │   ├── chat_2024-07-09.md
+│   │   │   │   │   │   ├── chat_2024-07-10.md
+│   │   │   │   │   │   ├── chat_2024-07-11.md
+│   │   │   │   │   │   ├── chat_2024-07-12.md
+│   │   │   │   │   │   ├── chat_2024-07-13.md
+│   │   │   │   │   │   ├── chat_2024-07-14.md
+│   │   │   │   │   │   ├── chat_2024-07-15.md
+│   │   │   │   │   │   ├── chat_2024-07-16.md
+│   │   │   │   │   │   ├── chat_2024-07-17.md
+│   │   │   │   │   │   ├── chat_2024-07-18.md
+│   │   │   │   │   │   ├── chat_2024-07-19.md
+│   │   │   │   │   │   ├── chat_2024-07-20.md
+│   │   │   │   │   │   ├── chat_2024-07-21.md
+│   │   │   │   │   │   ├── chat_2024-07-22.md
+│   │   │   │   │   │   ├── chat_2024-07-23.md
+│   │   │   │   │   │   ├── chat_2024-07-24.md
+│   │   │   │   │   │   ├── chat_2024-07-25.md
+│   │   │   │   │   │   ├── chat_2024-07-26.md
+│   │   │   │   │   │   ├── chat_2024-07-29.md
+│   │   │   │   │   │   ├── chat_2024-07-30.md
+│   │   │   │   │   │   ├── chat_2024-08-07.md
+│   │   │   │   │   │   ├── chat_2024-08-12.md
+│   │   │   │   │   │   ├── chat_2024-08-15.md
+│   │   │   │   │   │   ├── chat_2024-08-17.md
+│   │   │   │   │   │   ├── chat_2024-09-08.md
+│   │   │   │   │   │   ├── chat_2024-09-09.md
+│   │   │   │   │   │   ├── chat_2024-09-10.md
+│   │   │   │   │   │   ├── chat_2024-09-11.md
+│   │   │   │   │   │   ├── chat_2024-09-12.md
+│   │   │   │   │   │   ├── chat_2024-09-13.md
+│   │   │   │   │   │   ├── chat_2024-09-17.md
+│   │   │   │   │   │   ├── chat_2024-09-18.md
+│   │   │   │   │   │   ├── chat_2024-09-23.md
+│   │   │   │   │   │   ├── chat_2024-09-27.md
+│   │   │   │   │   │   ├── chat_2024-10-03.md
+│   │   │   │   │   │   ├── chat_2024-10-04.md
+│   │   │   │   │   │   ├── chat_2024-10-05.md
+│   │   │   │   │   │   ├── chat_2024-10-16.md
+│   │   │   │   │   │   ├── chat_2024-10-17.md
+│   │   │   │   │   │   ├── chat_2024-10-22.md
+│   │   │   │   │   │   ├── chat_2024-10-23.md
+│   │   │   │   │   │   ├── chat_2024-10-24.md
+│   │   │   │   │   │   ├── chat_2024-10-25.md
+│   │   │   │   │   │   ├── chat_2024-10-26.md
+│   │   │   │   │   │   ├── chat_2024-10-27.md
+│   │   │   │   │   │   ├── chat_2024-10-28.md
+│   │   │   │   │   │   ├── chat_2024-10-29.md
+│   │   │   │   │   │   ├── chat_2024-10-30.md
+│   │   │   │   │   │   ├── chat_2024-10-31.md
+│   │   │   │   │   │   ├── chat_2024-11-01.md
+│   │   │   │   │   │   ├── chat_2024-11-02.md
+│   │   │   │   │   │   ├── chat_2024-11-03.md
+│   │   │   │   │   │   ├── chat_2024-11-04.md
+│   │   │   │   │   │   ├── chat_2024-11-05.md
+│   │   │   │   │   │   ├── chat_2024-11-06.md
+│   │   │   │   │   │   ├── chat_2024-11-07.md
+│   │   │   │   │   │   ├── chat_2024-11-08.md
+│   │   │   │   │   │   ├── chat_2024-11-09.md
+│   │   │   │   │   │   ├── chat_2024-11-10.md
+│   │   │   │   │   │   ├── chat_2024-11-11.md
+│   │   │   │   │   │   ├── chat_2024-11-12.md
+│   │   │   │   │   │   ├── chat_2024-11-13.md
+│   │   │   │   │   │   ├── chat_2024-11-14.md
+│   │   │   │   │   │   ├── chat_2024-11-15.md
+│   │   │   │   │   │   ├── chat_2024-11-16.md
+│   │   │   │   │   │   ├── chat_2024-11-17.md
+│   │   │   │   │   │   ├── chat_2024-11-18.md
+│   │   │   │   │   │   ├── chat_2024-11-19.md
+│   │   │   │   │   │   ├── chat_2024-11-20.md
+│   │   │   │   │   │   ├── chat_2024-11-21.md
+│   │   │   │   │   │   ├── chat_2024-11-22.md
+│   │   │   │   │   │   ├── chat_2024-11-23.md
+│   │   │   │   │   │   ├── chat_2024-11-24.md
+│   │   │   │   │   │   ├── chat_2024-11-25.md
+│   │   │   │   │   │   ├── chat_2024-11-26.md
+│   │   │   │   │   │   ├── chat_2024-11-27.md
+│   │   │   │   │   │   ├── chat_2024-11-28.md
+│   │   │   │   │   │   ├── chat_2024-11-29.md
+│   │   │   │   │   │   ├── chat_2024-11-30.md
+│   │   │   │   │   │   ├── chat_2024-12-01.md
+│   │   │   │   │   │   ├── chat_2024-12-02.md
+│   │   │   │   │   │   ├── chat_2024-12-03.md
+│   │   │   │   │   │   ├── chat_2024-12-04.md
+│   │   │   │   │   │   ├── chat_2024-12-05.md
+│   │   │   │   │   │   ├── chat_2024-12-06.md
+│   │   │   │   │   │   ├── chat_2024-12-07.md
+│   │   │   │   │   │   ├── chat_2024-12-08.md
+│   │   │   │   │   │   └── chat_2024-12-09.md
+│   │   │   │   │   ├── general
+│   │   │   │   │   │   ├── chat_2024-11-30.md
+│   │   │   │   │   │   ├── chat_2024-12-03.md
+│   │   │   │   │   │   ├── chat_2024-12-04.md
+│   │   │   │   │   │   └── chat_2024-12-09.md
+│   │   │   │   │   ├── ideas-feedback-rants
+│   │   │   │   │   │   ├── chat_2024-10-29.md
+│   │   │   │   │   │   ├── chat_2024-10-30.md
+│   │   │   │   │   │   ├── chat_2024-10-31.md
+│   │   │   │   │   │   ├── chat_2024-11-01.md
+│   │   │   │   │   │   ├── chat_2024-11-02.md
+│   │   │   │   │   │   ├── chat_2024-11-03.md
+│   │   │   │   │   │   ├── chat_2024-11-04.md
+│   │   │   │   │   │   ├── chat_2024-11-05.md
+│   │   │   │   │   │   ├── chat_2024-11-06.md
+│   │   │   │   │   │   ├── chat_2024-11-07.md
+│   │   │   │   │   │   ├── chat_2024-11-08.md
+│   │   │   │   │   │   ├── chat_2024-11-09.md
+│   │   │   │   │   │   ├── chat_2024-11-10.md
+│   │   │   │   │   │   ├── chat_2024-11-11.md
+│   │   │   │   │   │   ├── chat_2024-11-12.md
+│   │   │   │   │   │   ├── chat_2024-11-13.md
+│   │   │   │   │   │   ├── chat_2024-11-14.md
+│   │   │   │   │   │   ├── chat_2024-11-15.md
+│   │   │   │   │   │   ├── chat_2024-11-16.md
+│   │   │   │   │   │   ├── chat_2024-11-17.md
+│   │   │   │   │   │   ├── chat_2024-11-18.md
+│   │   │   │   │   │   ├── chat_2024-11-19.md
+│   │   │   │   │   │   ├── chat_2024-11-20.md
+│   │   │   │   │   │   ├── chat_2024-11-21.md
+│   │   │   │   │   │   ├── chat_2024-11-22.md
+│   │   │   │   │   │   ├── chat_2024-11-23.md
+│   │   │   │   │   │   ├── chat_2024-11-24.md
+│   │   │   │   │   │   ├── chat_2024-11-25.md
+│   │   │   │   │   │   ├── chat_2024-11-26.md
+│   │   │   │   │   │   ├── chat_2024-11-27.md
+│   │   │   │   │   │   ├── chat_2024-11-28.md
+│   │   │   │   │   │   ├── chat_2024-11-29.md
+│   │   │   │   │   │   ├── chat_2024-11-30.md
+│   │   │   │   │   │   ├── chat_2024-12-01.md
+│   │   │   │   │   │   ├── chat_2024-12-02.md
+│   │   │   │   │   │   ├── chat_2024-12-03.md
+│   │   │   │   │   │   ├── chat_2024-12-04.md
+│   │   │   │   │   │   ├── chat_2024-12-05.md
+│   │   │   │   │   │   ├── chat_2024-12-06.md
+│   │   │   │   │   │   ├── chat_2024-12-07.md
+│   │   │   │   │   │   ├── chat_2024-12-08.md
+│   │   │   │   │   │   └── chat_2024-12-09.md
+│   │   │   │   │   ├── memes-and-marketing
+│   │   │   │   │   │   ├── chat_2024-10-26.md
+│   │   │   │   │   │   ├── chat_2024-10-27.md
+│   │   │   │   │   │   ├── chat_2024-10-28.md
+│   │   │   │   │   │   ├── chat_2024-10-29.md
+│   │   │   │   │   │   ├── chat_2024-10-30.md
+│   │   │   │   │   │   ├── chat_2024-10-31.md
+│   │   │   │   │   │   ├── chat_2024-11-01.md
+│   │   │   │   │   │   ├── chat_2024-11-02.md
+│   │   │   │   │   │   ├── chat_2024-11-03.md
+│   │   │   │   │   │   ├── chat_2024-11-04.md
+│   │   │   │   │   │   ├── chat_2024-11-05.md
+│   │   │   │   │   │   ├── chat_2024-11-06.md
+│   │   │   │   │   │   ├── chat_2024-11-07.md
+│   │   │   │   │   │   ├── chat_2024-11-08.md
+│   │   │   │   │   │   ├── chat_2024-11-09.md
+│   │   │   │   │   │   ├── chat_2024-11-10.md
+│   │   │   │   │   │   ├── chat_2024-11-11.md
+│   │   │   │   │   │   ├── chat_2024-11-12.md
+│   │   │   │   │   │   ├── chat_2024-11-13.md
+│   │   │   │   │   │   ├── chat_2024-11-14.md
+│   │   │   │   │   │   ├── chat_2024-11-15.md
+│   │   │   │   │   │   ├── chat_2024-11-16.md
+│   │   │   │   │   │   ├── chat_2024-11-17.md
+│   │   │   │   │   │   ├── chat_2024-11-18.md
+│   │   │   │   │   │   ├── chat_2024-11-19.md
+│   │   │   │   │   │   ├── chat_2024-11-20.md
+│   │   │   │   │   │   ├── chat_2024-11-21.md
+│   │   │   │   │   │   ├── chat_2024-11-22.md
+│   │   │   │   │   │   ├── chat_2024-11-23.md
+│   │   │   │   │   │   ├── chat_2024-11-24.md
+│   │   │   │   │   │   ├── chat_2024-11-25.md
+│   │   │   │   │   │   ├── chat_2024-11-26.md
+│   │   │   │   │   │   ├── chat_2024-11-27.md
+│   │   │   │   │   │   ├── chat_2024-11-28.md
+│   │   │   │   │   │   ├── chat_2024-11-29.md
+│   │   │   │   │   │   ├── chat_2024-11-30.md
+│   │   │   │   │   │   ├── chat_2024-12-01.md
+│   │   │   │   │   │   ├── chat_2024-12-02.md
+│   │   │   │   │   │   ├── chat_2024-12-03.md
+│   │   │   │   │   │   ├── chat_2024-12-04.md
+│   │   │   │   │   │   ├── chat_2024-12-05.md
+│   │   │   │   │   │   ├── chat_2024-12-06.md
+│   │   │   │   │   │   ├── chat_2024-12-07.md
+│   │   │   │   │   │   ├── chat_2024-12-08.md
+│   │   │   │   │   │   └── chat_2024-12-09.md
+│   │   │   │   │   ├── price-talk-trenches
+│   │   │   │   │   │   ├── chat_2024-10-26.md
+│   │   │   │   │   │   ├── chat_2024-10-27.md
+│   │   │   │   │   │   ├── chat_2024-10-28.md
+│   │   │   │   │   │   ├── chat_2024-10-29.md
+│   │   │   │   │   │   ├── chat_2024-10-30.md
+│   │   │   │   │   │   ├── chat_2024-10-31.md
+│   │   │   │   │   │   ├── chat_2024-11-01.md
+│   │   │   │   │   │   ├── chat_2024-11-02.md
+│   │   │   │   │   │   ├── chat_2024-11-03.md
+│   │   │   │   │   │   ├── chat_2024-11-04.md
+│   │   │   │   │   │   ├── chat_2024-11-05.md
+│   │   │   │   │   │   ├── chat_2024-11-06.md
+│   │   │   │   │   │   ├── chat_2024-11-07.md
+│   │   │   │   │   │   ├── chat_2024-11-08.md
+│   │   │   │   │   │   ├── chat_2024-11-09.md
+│   │   │   │   │   │   ├── chat_2024-11-10.md
+│   │   │   │   │   │   ├── chat_2024-11-11.md
+│   │   │   │   │   │   ├── chat_2024-11-12.md
+│   │   │   │   │   │   ├── chat_2024-11-13.md
+│   │   │   │   │   │   ├── chat_2024-11-14.md
+│   │   │   │   │   │   ├── chat_2024-11-15.md
+│   │   │   │   │   │   ├── chat_2024-11-16.md
+│   │   │   │   │   │   ├── chat_2024-11-17.md
+│   │   │   │   │   │   ├── chat_2024-11-18.md
+│   │   │   │   │   │   ├── chat_2024-11-19.md
+│   │   │   │   │   │   ├── chat_2024-11-20.md
+│   │   │   │   │   │   ├── chat_2024-11-21.md
+│   │   │   │   │   │   ├── chat_2024-11-22.md
+│   │   │   │   │   │   ├── chat_2024-11-23.md
+│   │   │   │   │   │   ├── chat_2024-11-24.md
+│   │   │   │   │   │   ├── chat_2024-11-25.md
+│   │   │   │   │   │   ├── chat_2024-11-26.md
+│   │   │   │   │   │   ├── chat_2024-11-27.md
+│   │   │   │   │   │   ├── chat_2024-11-28.md
+│   │   │   │   │   │   ├── chat_2024-11-29.md
+│   │   │   │   │   │   ├── chat_2024-11-30.md
+│   │   │   │   │   │   ├── chat_2024-12-01.md
+│   │   │   │   │   │   ├── chat_2024-12-02.md
+│   │   │   │   │   │   ├── chat_2024-12-03.md
+│   │   │   │   │   │   ├── chat_2024-12-04.md
+│   │   │   │   │   │   ├── chat_2024-12-05.md
+│   │   │   │   │   │   ├── chat_2024-12-06.md
+│   │   │   │   │   │   ├── chat_2024-12-07.md
+│   │   │   │   │   │   ├── chat_2024-12-08.md
+│   │   │   │   │   │   └── chat_2024-12-09.md
+│   │   │   │   │   ├── the-arena
+│   │   │   │   │   │   ├── chat_2024-10-22.md
+│   │   │   │   │   │   ├── chat_2024-10-23.md
+│   │   │   │   │   │   ├── chat_2024-10-24.md
+│   │   │   │   │   │   ├── chat_2024-10-25.md
+│   │   │   │   │   │   ├── chat_2024-10-26.md
+│   │   │   │   │   │   ├── chat_2024-10-27.md
+│   │   │   │   │   │   ├── chat_2024-10-28.md
+│   │   │   │   │   │   ├── chat_2024-10-29.md
+│   │   │   │   │   │   ├── chat_2024-10-30.md
+│   │   │   │   │   │   ├── chat_2024-10-31.md
+│   │   │   │   │   │   ├── chat_2024-11-01.md
+│   │   │   │   │   │   ├── chat_2024-11-02.md
+│   │   │   │   │   │   ├── chat_2024-11-03.md
+│   │   │   │   │   │   ├── chat_2024-11-04.md
+│   │   │   │   │   │   ├── chat_2024-11-05.md
+│   │   │   │   │   │   ├── chat_2024-11-06.md
+│   │   │   │   │   │   ├── chat_2024-11-07.md
+│   │   │   │   │   │   ├── chat_2024-11-08.md
+│   │   │   │   │   │   ├── chat_2024-11-09.md
+│   │   │   │   │   │   ├── chat_2024-11-10.md
+│   │   │   │   │   │   ├── chat_2024-11-11.md
+│   │   │   │   │   │   ├── chat_2024-11-12.md
+│   │   │   │   │   │   ├── chat_2024-11-13.md
+│   │   │   │   │   │   ├── chat_2024-11-14.md
+│   │   │   │   │   │   ├── chat_2024-11-15.md
+│   │   │   │   │   │   ├── chat_2024-11-16.md
+│   │   │   │   │   │   ├── chat_2024-11-17.md
+│   │   │   │   │   │   ├── chat_2024-11-18.md
+│   │   │   │   │   │   ├── chat_2024-11-19.md
+│   │   │   │   │   │   ├── chat_2024-11-20.md
+│   │   │   │   │   │   ├── chat_2024-11-21.md
+│   │   │   │   │   │   ├── chat_2024-11-22.md
+│   │   │   │   │   │   ├── chat_2024-11-23.md
+│   │   │   │   │   │   ├── chat_2024-11-24.md
+│   │   │   │   │   │   ├── chat_2024-11-25.md
+│   │   │   │   │   │   ├── chat_2024-11-26.md
+│   │   │   │   │   │   ├── chat_2024-11-27.md
+│   │   │   │   │   │   ├── chat_2024-11-28.md
+│   │   │   │   │   │   ├── chat_2024-11-29.md
+│   │   │   │   │   │   ├── chat_2024-11-30.md
+│   │   │   │   │   │   ├── chat_2024-12-01.md
+│   │   │   │   │   │   ├── chat_2024-12-02.md
+│   │   │   │   │   │   ├── chat_2024-12-03.md
+│   │   │   │   │   │   ├── chat_2024-12-04.md
+│   │   │   │   │   │   ├── chat_2024-12-05.md
+│   │   │   │   │   │   ├── chat_2024-12-06.md
+│   │   │   │   │   │   ├── chat_2024-12-07.md
+│   │   │   │   │   │   ├── chat_2024-12-08.md
+│   │   │   │   │   │   └── chat_2024-12-09.md
+│   │   │   │   │   └── twitter
+│   │   │   │   │       ├── chat_2024-10-28.md
+│   │   │   │   │       ├── chat_2024-10-29.md
+│   │   │   │   │       ├── chat_2024-10-30.md
+│   │   │   │   │       ├── chat_2024-10-31.md
+│   │   │   │   │       ├── chat_2024-11-01.md
+│   │   │   │   │       ├── chat_2024-11-02.md
+│   │   │   │   │       ├── chat_2024-11-03.md
+│   │   │   │   │       ├── chat_2024-11-04.md
+│   │   │   │   │       ├── chat_2024-11-05.md
+│   │   │   │   │       ├── chat_2024-11-06.md
+│   │   │   │   │       ├── chat_2024-11-07.md
+│   │   │   │   │       ├── chat_2024-11-08.md
+│   │   │   │   │       ├── chat_2024-11-09.md
+│   │   │   │   │       ├── chat_2024-11-10.md
+│   │   │   │   │       ├── chat_2024-11-11.md
+│   │   │   │   │       ├── chat_2024-11-12.md
+│   │   │   │   │       ├── chat_2024-11-13.md
+│   │   │   │   │       ├── chat_2024-11-14.md
+│   │   │   │   │       ├── chat_2024-11-15.md
+│   │   │   │   │       ├── chat_2024-11-16.md
+│   │   │   │   │       ├── chat_2024-11-17.md
+│   │   │   │   │       ├── chat_2024-11-18.md
+│   │   │   │   │       ├── chat_2024-11-19.md
+│   │   │   │   │       ├── chat_2024-11-20.md
+│   │   │   │   │       ├── chat_2024-11-21.md
+│   │   │   │   │       ├── chat_2024-11-22.md
+│   │   │   │   │       ├── chat_2024-11-23.md
+│   │   │   │   │       ├── chat_2024-11-24.md
+│   │   │   │   │       ├── chat_2024-11-25.md
+│   │   │   │   │       └── chat_2024-11-26.md
+│   │   │   │   ├── welcome
+│   │   │   │   │   ├── announcements
+│   │   │   │   │   │   ├── chat_2024-11-27.md
+│   │   │   │   │   │   ├── chat_2024-11-28.md
+│   │   │   │   │   │   ├── chat_2024-11-30.md
+│   │   │   │   │   │   ├── chat_2024-12-02.md
+│   │   │   │   │   │   ├── chat_2024-12-05.md
+│   │   │   │   │   │   └── chat_2024-12-06.md
+│   │   │   │   │   └── stage
+│   │   │   │   │       ├── chat_2024-11-27.md
+│   │   │   │   │       ├── chat_2024-11-28.md
+│   │   │   │   │       ├── chat_2024-11-29.md
+│   │   │   │   │       ├── chat_2024-11-30.md
+│   │   │   │   │       ├── chat_2024-12-01.md
+│   │   │   │   │       ├── chat_2024-12-02.md
+│   │   │   │   │       ├── chat_2024-12-03.md
+│   │   │   │   │       └── chat_2024-12-05.md
+│   │   │   │   └── workinggroups
+│   │   │   │       └── workgroups-general
+│   │   │   │           ├── chat_2024-11-27.md
+│   │   │   │           ├── chat_2024-11-29.md
+│   │   │   │           ├── chat_2024-11-30.md
+│   │   │   │           ├── chat_2024-12-02.md
+│   │   │   │           ├── chat_2024-12-03.md
+│   │   │   │           ├── chat_2024-12-06.md
+│   │   │   │           ├── chat_2024-12-07.md
+│   │   │   │           └── chat_2024-12-08.md
+│   │   │   ├── faq-and-support.md
+│   │   │   ├── index.md
+│   │   │   ├── Notes
+│   │   │   │   ├── cookbook.md
+│   │   │   │   ├── lore.md
+│   │   │   │   └── murad2049.md
+│   │   │   └── Streams
+│   │   │       ├── 01-2025
+│   │   │       │   ├── 2025-01-03.md
+│   │   │       │   ├── 2025-01-10.md
+│   │   │       │   ├── 2025-01-17.md
+│   │   │       │   └── 2025-01-24.md
+│   │   │       ├── 10-2024
+│   │   │       │   ├── 2024-10-25.md
+│   │   │       │   ├── 2024-10-27.md
+│   │   │       │   └── 2024-10-29.md
+│   │   │       ├── 11-2024
+│   │   │       │   ├── 2024-11-06.md
+│   │   │       │   ├── 2024-11-08.md
+│   │   │       │   ├── 2024-11-10.md
+│   │   │       │   ├── 2024-11-15.md
+│   │   │       │   ├── 2024-11-21.md
+│   │   │       │   ├── 2024-11-22.md
+│   │   │       │   ├── 2024-11-24.md
+│   │   │       │   ├── 2024-11-26.md
+│   │   │       │   ├── 2024-11-28.md
+│   │   │       │   └── 2024-11-29.md
+│   │   │       ├── 12-2024
+│   │   │       │   ├── 2024-12-01.md
+│   │   │       │   ├── 2024-12-03.md
+│   │   │       │   ├── 2024-12-05.md
+│   │   │       │   ├── 2024-12-06.md
+│   │   │       │   ├── 2024-12-10.md
+│   │   │       │   ├── 2024-12-11.md
+│   │   │       │   ├── 2024-12-13.md
+│   │   │       │   ├── 2024-12-17.md
+│   │   │       │   ├── 2024-12-20.md
+│   │   │       │   ├── 2024-12-27.md
+│   │   │       │   └── greenpill
+│   │   │       │       ├── ai_evolution.md
+│   │   │       │       ├── core_concepts.md
+│   │   │       │       ├── daos_ai_evolution2.md
+│   │   │       │       ├── greenpill_ai-dao-prompt.md
+│   │   │       │       ├── index.md
+│   │   │       │       └── information_management.md
+│   │   │       └── index.md
+│   │   ├── docs
+│   │   │   ├── advanced
+│   │   │   │   ├── autonomous-trading.md
+│   │   │   │   ├── eliza-in-tee.md
+│   │   │   │   ├── fine-tuning.md
+│   │   │   │   ├── infrastructure.md
+│   │   │   │   ├── trust-engine.md
+│   │   │   │   └── verified-inference.md
+│   │   │   ├── api
+│   │   │   │   ├── classes
+│   │   │   │   │   ├── AgentRuntime.md
+│   │   │   │   │   ├── DatabaseAdapter.md
+│   │   │   │   │   ├── MemoryManager.md
+│   │   │   │   │   └── Service.md
+│   │   │   │   ├── enumerations
+│   │   │   │   │   ├── Clients.md
+│   │   │   │   │   ├── GoalStatus.md
+│   │   │   │   │   ├── ModelClass.md
+│   │   │   │   │   ├── ModelProviderName.md
+│   │   │   │   │   └── ServiceType.md
+│   │   │   │   ├── functions
+│   │   │   │   │   ├── addHeader.md
+│   │   │   │   │   ├── composeActionExamples.md
+│   │   │   │   │   ├── composeContext.md
+│   │   │   │   │   ├── createGoal.md
+│   │   │   │   │   ├── createRelationship.md
+│   │   │   │   │   ├── embed.md
+│   │   │   │   │   ├── findNearestEnvFile.md
+│   │   │   │   │   ├── formatActionNames.md
+│   │   │   │   │   ├── formatActions.md
+│   │   │   │   │   ├── formatActors.md
+│   │   │   │   │   ├── formatEvaluatorExampleDescriptions.md
+│   │   │   │   │   ├── formatEvaluatorExamples.md
+│   │   │   │   │   ├── formatEvaluatorNames.md
+│   │   │   │   │   ├── formatEvaluators.md
+│   │   │   │   │   ├── formatGoalsAsString.md
+│   │   │   │   │   ├── formatMessages.md
+│   │   │   │   │   ├── formatPosts.md
+│   │   │   │   │   ├── formatRelationships.md
+│   │   │   │   │   ├── formatTimestamp.md
+│   │   │   │   │   ├── generateCaption.md
+│   │   │   │   │   ├── generateImage.md
+│   │   │   │   │   ├── generateMessageResponse.md
+│   │   │   │   │   ├── generateObjectArray.md
+│   │   │   │   │   ├── generateObject.md
+│   │   │   │   │   ├── generateShouldRespond.md
+│   │   │   │   │   ├── generateTextArray.md
+│   │   │   │   │   ├── generateText.md
+│   │   │   │   │   ├── generateTrueOrFalse.md
+│   │   │   │   │   ├── getActorDetails.md
+│   │   │   │   │   ├── getEndpoint.md
+│   │   │   │   │   ├── getGoals.md
+│   │   │   │   │   ├── getModel.md
+│   │   │   │   │   ├── getProviders.md
+│   │   │   │   │   ├── getRelationship.md
+│   │   │   │   │   ├── getRelationships.md
+│   │   │   │   │   ├── loadEnvConfig.md
+│   │   │   │   │   ├── retrieveCachedEmbedding.md
+│   │   │   │   │   ├── splitChunks.md
+│   │   │   │   │   ├── trimTokens.md
+│   │   │   │   │   └── updateGoal.md
+│   │   │   │   ├── globals.md
+│   │   │   │   ├── index.md
+│   │   │   │   ├── interfaces
+│   │   │   │   │   ├── Account.md
+│   │   │   │   │   ├── ActionExample.md
+│   │   │   │   │   ├── Action.md
+│   │   │   │   │   ├── Actor.md
+│   │   │   │   │   ├── Content.md
+│   │   │   │   │   ├── ConversationExample.md
+│   │   │   │   │   ├── EvaluationExample.md
+│   │   │   │   │   ├── Evaluator.md
+│   │   │   │   │   ├── Goal.md
+│   │   │   │   │   ├── IAgentRuntime.md
+│   │   │   │   │   ├── IBrowserService.md
+│   │   │   │   │   ├── IDatabaseAdapter.md
+│   │   │   │   │   ├── IImageDescriptionService.md
+│   │   │   │   │   ├── IMemoryManager.md
+│   │   │   │   │   ├── IPdfService.md
+│   │   │   │   │   ├── ISpeechService.md
+│   │   │   │   │   ├── ITextGenerationService.md
+│   │   │   │   │   ├── ITranscriptionService.md
+│   │   │   │   │   ├── IVideoService.md
+│   │   │   │   │   ├── Memory.md
+│   │   │   │   │   ├── MessageExample.md
+│   │   │   │   │   ├── Objective.md
+│   │   │   │   │   ├── Participant.md
+│   │   │   │   │   ├── Provider.md
+│   │   │   │   │   ├── Relationship.md
+│   │   │   │   │   ├── Room.md
+│   │   │   │   │   └── State.md
+│   │   │   │   ├── _media
+│   │   │   │   │   ├── README_CN.md
+│   │   │   │   │   ├── README_FR.md
+│   │   │   │   │   ├── README_JA.md
+│   │   │   │   │   └── README_KOR.md
+│   │   │   │   ├── type-aliases
+│   │   │   │   │   ├── Character.md
+│   │   │   │   │   ├── Client.md
+│   │   │   │   │   ├── HandlerCallback.md
+│   │   │   │   │   ├── Handler.md
+│   │   │   │   │   ├── Media.md
+│   │   │   │   │   ├── Model.md
+│   │   │   │   │   ├── Models.md
+│   │   │   │   │   ├── Plugin.md
+│   │   │   │   │   ├── UUID.md
+│   │   │   │   │   └── Validator.md
+│   │   │   │   ├── typedoc-sidebar.cjs
+│   │   │   │   └── variables
+│   │   │   │       ├── defaultCharacter.md
+│   │   │   │       ├── elizaLogger.md
+│   │   │   │       ├── embeddingDimension.md
+│   │   │   │       ├── embeddingZeroVector.md
+│   │   │   │       ├── evaluationTemplate.md
+│   │   │   │       └── settings.md
+│   │   │   ├── contributing.md
+│   │   │   ├── core
+│   │   │   │   ├── actions.md
+│   │   │   │   ├── agents.md
+│   │   │   │   ├── characterfile.md
+│   │   │   │   ├── evaluators.md
+│   │   │   │   └── providers.md
+│   │   │   ├── faq.md
+│   │   │   ├── guides
+│   │   │   │   ├── advanced.md
+│   │   │   │   ├── configuration.md
+│   │   │   │   ├── docker-setup.md
+│   │   │   │   ├── local-development.md
+│   │   │   │   ├── secrets-management.md
+│   │   │   │   ├── start-script.md
+│   │   │   │   ├── template-configuration.md
+│   │   │   │   └── wsl.md
+│   │   │   ├── intro.md
+│   │   │   ├── packages
+│   │   │   │   ├── adapters.md
+│   │   │   │   ├── agent.md
+│   │   │   │   ├── agents.md
+│   │   │   │   ├── clients.md
+│   │   │   │   ├── core.md
+│   │   │   │   ├── database-adapters.md
+│   │   │   │   ├── packages.md
+│   │   │   │   └── plugins.md
+│   │   │   └── quickstart.md
+│   │   ├── docusaurus.config.js
+│   │   ├── package.json
+│   │   ├── package-lock.json
+│   │   ├── README_AR.md
+│   │   ├── README_CN.md
+│   │   ├── README_DE.md
+│   │   ├── README_ES.md
+│   │   ├── README_FR.md
+│   │   ├── README_JA.md
+│   │   ├── README.md
+│   │   ├── README_PT.md
+│   │   ├── README_TH.md
+│   │   ├── sidebars.js
+│   │   ├── sidebars.js.bak
+│   │   ├── src
+│   │   │   ├── components
+│   │   │   │   ├── HomepageFeatures
+│   │   │   │   │   ├── index.jsx
+│   │   │   │   │   └── styles.module.css
+│   │   │   │   └── HomepageHeader
+│   │   │   │       ├── index.jsx
+│   │   │   │       └── styles.module.css
+│   │   │   ├── css
+│   │   │   │   └── custom.css
+│   │   │   └── pages
+│   │   │       ├── index.jsx
+│   │   │       ├── index.module.css
+│   │   │       └── markdown-page.md
+│   │   └── static
+│   │       └── img
+│   │           ├── ai16z_heroshot.png
+│   │           ├── background.jpg
+│   │           ├── blurback.png
+│   │           ├── discord_llm_pipeline2.jpg
+│   │           ├── e_black.png
+│   │           ├── elijah.jpg
+│   │           ├── eliza_banner.jpg
+│   │           ├── eliza_diagram.jpg
+│   │           ├── eliza_diagram.png
+│   │           ├── eliza_in_tee.jpg
+│   │           ├── e_white.png
+│   │           ├── favicon.ico
+│   │           ├── favicon_old.ico
+│   │           ├── funnel.jpg
+│   │           ├── journey.jpg
+│   │           ├── logo.svg
+│   │           ├── main.png
+│   │           ├── overload2.jpg
+│   │           ├── tokenomics1.jpg
+│   │           ├── tokenomics2.jpg
+│   │           └── website_v1.jpg
+│   ├── eliza.manifest.template
+│   ├── i18n
+│   │   └── readme
+│   │       ├── README_AR.md
+│   │       ├── README_CN.md
+│   │       ├── README_DE.md
+│   │       ├── README_ES.md
+│   │       ├── README_FA.md
+│   │       ├── README_FR.md
+│   │       ├── README_GR.md
+│   │       ├── README_HE.md
+│   │       ├── README_HU.md
+│   │       ├── README_IT.md
+│   │       ├── README_JA.md
+│   │       ├── README_KOR.md
+│   │       ├── README_NL.md
+│   │       ├── README_PL.md
+│   │       ├── README_PTBR.md
+│   │       ├── README_RO.md
+│   │       ├── README_RS.md
+│   │       ├── README_RU.md
+│   │       ├── README_TG.md
+│   │       ├── README_TH.md
+│   │       ├── README_TR.md
+│   │       └── README_VI.md
+│   ├── jest.config.json
+│   ├── lerna.json
+│   ├── LICENSE
+│   ├── Makefile
+│   ├── package.json
+│   ├── packages
+│   │   ├── adapter-mongodb
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── src
+│   │   │   │   ├── index.ts
+│   │   │   │   └── __tests__
+│   │   │   │       ├── docker-compose.test.yml
+│   │   │   │       ├── mongodb-adapter.test.ts
+│   │   │   │       └── run_tests.sh
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── adapter-pglite
+│   │   │   ├── package.json
+│   │   │   ├── schema.sql
+│   │   │   ├── src
+│   │   │   │   └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── adapter-postgres
+│   │   │   ├── config.toml
+│   │   │   ├── migrations
+│   │   │   │   └── 20240318103238_remote_schema.sql
+│   │   │   ├── package.json
+│   │   │   ├── schema.sql
+│   │   │   ├── seed.sql
+│   │   │   ├── src
+│   │   │   │   ├── index.ts
+│   │   │   │   └── __tests__
+│   │   │   │       ├── docker-compose.test.yml
+│   │   │   │       ├── README.md
+│   │   │   │       ├── run_tests.sh
+│   │   │   │       └── vector-extension.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── adapter-qdrant
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── src
+│   │   │   │   └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── adapter-redis
+│   │   │   ├── package.json
+│   │   │   ├── src
+│   │   │   │   └── index.ts
+│   │   │   ├── __tests__
+│   │   │   │   └── redis-adapter.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── adapter-sqlite
+│   │   │   ├── package.json
+│   │   │   ├── src
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── sqliteTables.ts
+│   │   │   │   └── sqlite_vec.ts
+│   │   │   ├── __tests__
+│   │   │   │   └── sqlite-adapter.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── adapter-sqljs
+│   │   │   ├── package.json
+│   │   │   ├── src
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── sqliteTables.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── adapter-supabase
+│   │   │   ├── config.toml
+│   │   │   ├── package.json
+│   │   │   ├── schema.sql
+│   │   │   ├── seed.sql
+│   │   │   ├── src
+│   │   │   │   └── index.ts
+│   │   │   ├── __tests__
+│   │   │   │   └── supabase-adapter.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── client-alexa
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── src
+│   │   │   │   ├── alexa-client.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── client-auto
+│   │   │   ├── package.json
+│   │   │   ├── src
+│   │   │   │   └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── client-deva
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── src
+│   │   │   │   ├── base.ts
+│   │   │   │   ├── controller.ts
+│   │   │   │   ├── devaClient.ts
+│   │   │   │   ├── enviroment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── templates.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── client-direct
+│   │   │   ├── package.json
+│   │   │   ├── src
+│   │   │   │   ├── api.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── README.md
+│   │   │   │   └── verifiable-log-api.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── client-discord
+│   │   │   ├── package.json
+│   │   │   ├── readme.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── chat_with_attachments.ts
+│   │   │   │   │   ├── download_media.ts
+│   │   │   │   │   ├── joinvoice.ts
+│   │   │   │   │   ├── leavevoice.ts
+│   │   │   │   │   ├── summarize_conversation.ts
+│   │   │   │   │   └── transcribe_media.ts
+│   │   │   │   ├── attachments.ts
+│   │   │   │   ├── constants.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── messages.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   ├── channelState.ts
+│   │   │   │   │   └── voiceState.ts
+│   │   │   │   ├── templates.ts
+│   │   │   │   ├── utils.ts
+│   │   │   │   └── voice.ts
+│   │   │   ├── __tests__
+│   │   │   │   └── discord-client.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── client-eliza-home
+│   │   │   ├── package.json
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── control_device.ts
+│   │   │   │   │   └── discover_devices.ts
+│   │   │   │   ├── capabilities.ts
+│   │   │   │   ├── config.ts
+│   │   │   │   ├── entities.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── handlers
+│   │   │   │   │   ├── device_handlers.ts
+│   │   │   │   │   ├── room_handlers.ts
+│   │   │   │   │   └── scene_handlers.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   ├── automation_state.ts
+│   │   │   │   │   └── device_state.ts
+│   │   │   │   ├── services
+│   │   │   │   │   ├── device_discovery.ts
+│   │   │   │   │   └── smart_things_api.ts
+│   │   │   │   ├── smart_home.ts
+│   │   │   │   ├── state.ts
+│   │   │   │   ├── templates.ts
+│   │   │   │   ├── types
+│   │   │   │   │   └── smart_things.ts
+│   │   │   │   ├── utils
+│   │   │   │   │   └── command_parser.ts
+│   │   │   │   └── utils.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── services
+│   │   │   │   │   └── smart_things_api.test.ts
+│   │   │   │   ├── smart_home.test.ts
+│   │   │   │   └── utils
+│   │   │   │       └── command_parser.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── client-farcaster
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── src
+│   │   │   │   ├── actions.ts
+│   │   │   │   ├── client.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── interactions.ts
+│   │   │   │   ├── memory.ts
+│   │   │   │   ├── post.ts
+│   │   │   │   ├── prompts.ts
+│   │   │   │   ├── types.ts
+│   │   │   │   └── utils.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── cast.test.ts
+│   │   │   │   ├── client.test.ts
+│   │   │   │   ├── interactions.test.ts
+│   │   │   │   └── test-utils.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── client-github
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── environment.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── environment.test.ts
+│   │   │   │   └── index.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── client-instagram
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── lib
+│   │   │   │   │   ├── actions.ts
+│   │   │   │   │   ├── auth.ts
+│   │   │   │   │   ├── media.ts
+│   │   │   │   │   ├── profile.ts
+│   │   │   │   │   └── state.ts
+│   │   │   │   ├── services
+│   │   │   │   │   ├── interaction.ts
+│   │   │   │   │   └── post.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── environment.test.ts
+│   │   │   │   ├── index.test.ts
+│   │   │   │   └── services
+│   │   │   │       └── post.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── client-lens
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── src
+│   │   │   │   ├── actions.ts
+│   │   │   │   ├── client.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── interactions.ts
+│   │   │   │   ├── memory.ts
+│   │   │   │   ├── post.ts
+│   │   │   │   ├── prompts.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── StorjProvider.ts
+│   │   │   │   ├── types.ts
+│   │   │   │   └── utils.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── client.test.ts
+│   │   │   │   ├── interactions.test.ts
+│   │   │   │   ├── post.test.ts
+│   │   │   │   └── test-utils.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── client-simsai
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── src
+│   │   │   │   ├── index.ts
+│   │   │   │   └── jeeter
+│   │   │   │       ├── base.ts
+│   │   │   │       ├── client.ts
+│   │   │   │       ├── constants.ts
+│   │   │   │       ├── environment.ts
+│   │   │   │       ├── interactions.ts
+│   │   │   │       ├── post.ts
+│   │   │   │       ├── search.ts
+│   │   │   │       ├── types.ts
+│   │   │   │       └── utils.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── client-slack
+│   │   │   ├── jest.config.js
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── chat_with_attachments.ts
+│   │   │   │   │   ├── send-message.action.ts
+│   │   │   │   │   ├── summarize_conversation.ts
+│   │   │   │   │   └── transcribe_media.ts
+│   │   │   │   ├── attachments.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── events.ts
+│   │   │   │   ├── examples
+│   │   │   │   │   ├── sc_01.png
+│   │   │   │   │   ├── sc_02.png
+│   │   │   │   │   ├── standalone-attachment.ts
+│   │   │   │   │   ├── standalone-example.ts
+│   │   │   │   │   ├── standalone-summarize.ts
+│   │   │   │   │   └── standalone-transcribe.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── messages.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   ├── channelState.ts
+│   │   │   │   │   └── slack-client.provider.ts
+│   │   │   │   ├── services
+│   │   │   │   │   └── slack.service.ts
+│   │   │   │   ├── templates.ts
+│   │   │   │   ├── types
+│   │   │   │   │   └── slack-types.ts
+│   │   │   │   └── utils
+│   │   │   │       └── slack-utils.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── message-manager.test.ts
+│   │   │   │   ├── slack-client.provider.test.ts
+│   │   │   │   └── slack-client.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── vitest.config.ts
+│   │   ├── client-telegram
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── config
+│   │   │   │   │   └── default.json5
+│   │   │   │   ├── constants.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── getOrCreateRecommenderInBe.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── messageManager.ts
+│   │   │   │   ├── telegramClient.ts
+│   │   │   │   ├── templates.ts
+│   │   │   │   └── utils.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── messageManager.test.ts
+│   │   │   │   ├── telegramClient.test.ts
+│   │   │   │   └── utils.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── client-telegram-account
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── src
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── telegramAccountClient.ts
+│   │   │   │   ├── templates.ts
+│   │   │   │   └── utils.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── client-twitter
+│   │   │   ├── package.json
+│   │   │   ├── src
+│   │   │   │   ├── base.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── interactions.ts
+│   │   │   │   ├── plugins
+│   │   │   │   │   ├── SttTtsSpacesPlugin.ts
+│   │   │   │   │   └── templates.ts
+│   │   │   │   ├── post.ts
+│   │   │   │   ├── search.ts
+│   │   │   │   ├── spaces.ts
+│   │   │   │   ├── __tests__
+│   │   │   │   │   └── environment.test.ts
+│   │   │   │   ├── types.ts
+│   │   │   │   └── utils.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── base.test.ts
+│   │   │   │   ├── environment.test.ts
+│   │   │   │   └── post.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── client-xmtp
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── src
+│   │   │   │   └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── core
+│   │   │   ├── elizaConfig.example.yaml
+│   │   │   ├── nodemon.json
+│   │   │   ├── package.json
+│   │   │   ├── package-lock.json
+│   │   │   ├── README-TESTS.md
+│   │   │   ├── renovate.json
+│   │   │   ├── src
+│   │   │   │   ├── actions.ts
+│   │   │   │   ├── cache.ts
+│   │   │   │   ├── config.ts
+│   │   │   │   ├── context.ts
+│   │   │   │   ├── database
+│   │   │   │   │   └── CircuitBreaker.ts
+│   │   │   │   ├── database.ts
+│   │   │   │   ├── defaultCharacter.ts
+│   │   │   │   ├── embedding.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── evaluators.ts
+│   │   │   │   ├── generation.ts
+│   │   │   │   ├── goals.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── knowledge.ts
+│   │   │   │   ├── localembeddingManager.ts
+│   │   │   │   ├── logger.ts
+│   │   │   │   ├── memory.ts
+│   │   │   │   ├── messages.ts
+│   │   │   │   ├── models.ts
+│   │   │   │   ├── parsing.ts
+│   │   │   │   ├── posts.ts
+│   │   │   │   ├── providers.ts
+│   │   │   │   ├── ragknowledge.ts
+│   │   │   │   ├── relationships.ts
+│   │   │   │   ├── runtime.ts
+│   │   │   │   ├── settings.ts
+│   │   │   │   ├── test_resources
+│   │   │   │   │   ├── constants.ts
+│   │   │   │   │   ├── createRuntime.ts
+│   │   │   │   │   ├── testSetup.ts
+│   │   │   │   │   └── types.ts
+│   │   │   │   ├── types.ts
+│   │   │   │   ├── utils.ts
+│   │   │   │   └── uuid.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── actions.test.ts
+│   │   │   │   ├── cache.test.ts
+│   │   │   │   ├── context.test.ts
+│   │   │   │   ├── database.test.ts
+│   │   │   │   ├── defaultCharacters.test.ts
+│   │   │   │   ├── embedding.test.ts
+│   │   │   │   ├── environment.test.ts
+│   │   │   │   ├── env.test.ts
+│   │   │   │   ├── evaluators.test.ts
+│   │   │   │   ├── goals.test.ts
+│   │   │   │   ├── knowledge.test.ts
+│   │   │   │   ├── memory.test.ts
+│   │   │   │   ├── messages.test.ts
+│   │   │   │   ├── models.test.ts
+│   │   │   │   ├── parsing.test.ts
+│   │   │   │   ├── posts.test.ts
+│   │   │   │   ├── providers.test.ts
+│   │   │   │   ├── relationships.test.ts
+│   │   │   │   ├── runtime.test.ts
+│   │   │   │   ├── uuid.test.ts
+│   │   │   │   └── videoGeneration.test.ts
+│   │   │   ├── tsconfig.build.json
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   ├── types
+│   │   │   │   └── index.d.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── create-eliza-app
+│   │   │   ├── package.json
+│   │   │   ├── package-lock.json
+│   │   │   ├── README.md
+│   │   │   ├── registry
+│   │   │   │   └── eliza.json
+│   │   │   ├── src
+│   │   │   │   └── index.ts
+│   │   │   └── tsconfig.json
+│   │   ├── elisa-dashboard-sync
+│   │   │   ├── package.json
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   └── syncDashboard.ts
+│   │   │   │   ├── evaluators
+│   │   │   │   │   ├── emergencyData.ts
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── providers
+│   │   │   │       ├── dashboard.ts
+│   │   │   │       └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-0g
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── upload.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── templates
+│   │   │   │   │   └── upload.ts
+│   │   │   │   └── utils
+│   │   │   │       ├── monitoring.ts
+│   │   │   │       └── security.ts
+│   │   │   ├── __tests__
+│   │   │   │   └── actions
+│   │   │   │       └── upload.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-0x
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── getIndicativePrice.ts
+│   │   │   │   │   ├── getQuote.ts
+│   │   │   │   │   └── swap.ts
+│   │   │   │   ├── constants.ts
+│   │   │   │   ├── EVMtokenRegistry.ts
+│   │   │   │   ├── hooks.ts
+│   │   │   │   │   └── useGetWalletClient.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── templates.ts
+│   │   │   │   ├── types.ts
+│   │   │   │   └── utils.ts
+│   │   │   ├── __tests__
+│   │   │   │   └── actions
+│   │   │   │       └── getIndicativePrice.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-3d-generation
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── constants.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── __tests__
+│   │   │   │   └── actions
+│   │   │   │       └── generate3d.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-abstract
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── deployTokenAction.ts
+│   │   │   │   │   ├── getBalanceAction.ts
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   └── transferAction.ts
+│   │   │   │   ├── constants
+│   │   │   │   │   ├── contracts
+│   │   │   │   │   │   └── basicToken.json
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── hooks
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   ├── useGetAccount.ts
+│   │   │   │   │   └── useGetWalletClient.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── utils
+│   │   │   │       ├── index.ts
+│   │   │   │       └── viemHelpers.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── deployTokenAction.test.ts
+│   │   │   │   ├── getBalanceAction.test.ts
+│   │   │   │   └── transferAction.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-agentkit
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── provider.ts
+│   │   │   ├── __tests__
+│   │   │   │   └── provider.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-akash
+│   │   │   ├── assets
+│   │   │   │   └── akash.jpg
+│   │   │   ├── biome.json
+│   │   │   ├── jest.config.js
+│   │   │   ├── package.json
+│   │   │   ├── readme.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── closeDeployment.ts
+│   │   │   │   │   ├── createCertificate.ts
+│   │   │   │   │   ├── createDeployment.ts
+│   │   │   │   │   ├── estimateGas.ts
+│   │   │   │   │   ├── getDeploymentApi.ts
+│   │   │   │   │   ├── getDeploymentStatus.ts
+│   │   │   │   │   ├── getGPUPricing.ts
+│   │   │   │   │   ├── getManifest.ts
+│   │   │   │   │   ├── getProviderInfo.ts
+│   │   │   │   │   └── getProvidersList.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── error
+│   │   │   │   │   └── error.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── wallet.ts
+│   │   │   │   ├── runtime_inspect.ts
+│   │   │   │   ├── sdl
+│   │   │   │   │   └── example.sdl.yml
+│   │   │   │   ├── types.ts
+│   │   │   │   └── utils
+│   │   │   │       └── paths.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-allora
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── getInference.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── topics.ts
+│   │   │   │   ├── templates
+│   │   │   │   │   └── index.ts
+│   │   │   │   └── tests
+│   │   │   │       └── topics.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-ankr
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── actionGetAccountBalance.ts
+│   │   │   │   │   ├── actionGetBlockchainStats.ts
+│   │   │   │   │   ├── actionGetCurrencies.ts
+│   │   │   │   │   ├── actionGetInteractions.ts
+│   │   │   │   │   ├── actionGetNFTHolders.ts
+│   │   │   │   │   ├── actionGetNFTMetadata.ts
+│   │   │   │   │   ├── actionGetNFTsByOwner.ts
+│   │   │   │   │   ├── actionGetNFTTransfers.ts
+│   │   │   │   │   ├── actionGetTokenHoldersCount.ts
+│   │   │   │   │   ├── actionGetTokenHolders.ts
+│   │   │   │   │   ├── actionGetTokenPrice.ts
+│   │   │   │   │   ├── actionGetTokenTransfers.ts
+│   │   │   │   │   ├── actionGetTransactionsByAddress.ts
+│   │   │   │   │   └── actionGetTransactionsByHash.ts
+│   │   │   │   ├── assets
+│   │   │   │   │   ├── ankr_b.jpg
+│   │   │   │   │   └── ankr.jpg
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── error
+│   │   │   │   │   ├── base.ts
+│   │   │   │   │   ├── configuration.ts
+│   │   │   │   │   └── validation.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── types
+│   │   │   │   │   └── types.ts
+│   │   │   │   └── validator
+│   │   │   │       └── apiParseValidation.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-anyone
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   ├── startAnyone.ts
+│   │   │   │   │   └── stopAnyone.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── services
+│   │   │   │       ├── AnyoneClientService.ts
+│   │   │   │       └── AnyoneProxyService.ts
+│   │   │   ├── __tests__
+│   │   │   │   └── actions
+│   │   │   │       ├── startAnyone.test.ts
+│   │   │   │       └── stopAnyone.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-apro
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.MD
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── attpsPriceQuery.ts
+│   │   │   │   │   ├── createAndRegisterAgent.ts
+│   │   │   │   │   ├── priceQuery.ts
+│   │   │   │   │   └── verifyData.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── templates.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── attpsPriceQuery.test.ts
+│   │   │   │   │   ├── createAndRegisterAgent.test.ts
+│   │   │   │   │   └── verifyData.test.ts
+│   │   │   │   └── index.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-aptos
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── transfer.ts
+│   │   │   │   ├── constants.ts
+│   │   │   │   ├── enviroment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── wallet.ts
+│   │   │   │   └── tests
+│   │   │   │       └── wallet.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-arbitrage
+│   │   │   ├── examples
+│   │   │   │   └── trader.character.json
+│   │   │   ├── package.json
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── arbitrageAction.ts
+│   │   │   │   ├── config
+│   │   │   │   │   ├── addresses.ts
+│   │   │   │   │   └── thresholds.ts
+│   │   │   │   ├── core
+│   │   │   │   │   ├── abi.ts
+│   │   │   │   │   ├── addresses.ts
+│   │   │   │   │   ├── Arbitrage.ts
+│   │   │   │   │   ├── EthMarket.ts
+│   │   │   │   │   ├── types.ts
+│   │   │   │   │   ├── UniswapV2EthPair.ts
+│   │   │   │   │   ├── utils.ts
+│   │   │   │   │   └── websocketmanager.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── marketProvider.ts
+│   │   │   │   ├── services
+│   │   │   │   │   └── ArbitrageService.ts
+│   │   │   │   └── type.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── actions
+│   │   │   │   │   └── arbitrageAction.test.ts
+│   │   │   │   ├── core
+│   │   │   │   │   └── Arbitrage.test.ts
+│   │   │   │   ├── index.test.ts
+│   │   │   │   ├── services
+│   │   │   │   │   └── ArbitrageService.test.ts
+│   │   │   │   ├── setup.ts
+│   │   │   │   └── utils
+│   │   │   │       └── TestMarket.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-arthera
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── transfer.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── wallet.ts
+│   │   │   │   ├── templates
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── transfer.test.ts
+│   │   │   │   │   └── wallet.test.ts
+│   │   │   │   └── types
+│   │   │   │       └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-asterai
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── query.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── providers
+│   │   │   │       └── asterai.provider.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── actions
+│   │   │   │   │   └── query.test.ts
+│   │   │   │   ├── environment.test.ts
+│   │   │   │   └── providers
+│   │   │   │       └── asterai.provider.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-autonome
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── launchAgent.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── __tests__
+│   │   │   │   └── actions
+│   │   │   │       └── launchAgent.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-avail
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── submitData.ts
+│   │   │   │   │   └── transfer.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── __tests__
+│   │   │   │   └── actions
+│   │   │   │       ├── submitData.test.ts
+│   │   │   │       └── transfer.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-avalanche
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── tokenMillCreate.ts
+│   │   │   │   │   ├── transfer.ts
+│   │   │   │   │   ├── yakStrategy.ts
+│   │   │   │   │   └── yakSwap.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   ├── strategies.ts
+│   │   │   │   │   ├── tokens.ts
+│   │   │   │   │   └── wallet.ts
+│   │   │   │   ├── types
+│   │   │   │   │   └── index.ts
+│   │   │   │   └── utils
+│   │   │   │       ├── constants.ts
+│   │   │   │       ├── index.ts
+│   │   │   │       └── tokenMill.ts
+│   │   │   ├── __tests__
+│   │   │   │   └── actions
+│   │   │   │       └── tokenMillCreate.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-b2
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── stake.ts
+│   │   │   │   │   ├── transfer.ts
+│   │   │   │   │   ├── unstake.ts
+│   │   │   │   │   └── withdraw.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── templates
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   ├── stake.ts
+│   │   │   │   │   ├── transfer.ts
+│   │   │   │   │   ├── unstake.ts
+│   │   │   │   │   └── withdraw.ts
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── stake.test.ts
+│   │   │   │   │   ├── transfer.test.ts
+│   │   │   │   │   ├── unstake.test.ts
+│   │   │   │   │   ├── wallet.test.ts
+│   │   │   │   │   └── withdraw.test.ts
+│   │   │   │   ├── types
+│   │   │   │   │   └── index.ts
+│   │   │   │   └── utils
+│   │   │   │       ├── chains.ts
+│   │   │   │       ├── constants.ts
+│   │   │   │       └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-binance
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── priceCheck.ts
+│   │   │   │   │   ├── spotBalance.ts
+│   │   │   │   │   └── spotTrade.ts
+│   │   │   │   ├── constants
+│   │   │   │   │   ├── api.ts
+│   │   │   │   │   ├── defaults.ts
+│   │   │   │   │   └── errors.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── services
+│   │   │   │   │   ├── account.ts
+│   │   │   │   │   ├── base.ts
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   ├── price.ts
+│   │   │   │   │   └── trade.ts
+│   │   │   │   ├── types
+│   │   │   │   │   ├── api
+│   │   │   │   │   │   ├── account.ts
+│   │   │   │   │   │   ├── price.ts
+│   │   │   │   │   │   └── trade.ts
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   └── internal
+│   │   │   │   │       ├── config.ts
+│   │   │   │   │       └── error.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── account.test.ts
+│   │   │   │   ├── price.test.ts
+│   │   │   │   └── trade.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-birdeye
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── test-all-endpoints.ts
+│   │   │   │   │   ├── token-search-address.ts
+│   │   │   │   │   ├── token-search-symbol.ts
+│   │   │   │   │   └── wallet-search-address.ts
+│   │   │   │   ├── birdeye.ts
+│   │   │   │   ├── constants.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── agent-portfolio-provider.ts
+│   │   │   │   ├── tests
+│   │   │   │   │   └── birdeye.test.ts
+│   │   │   │   ├── types
+│   │   │   │   │   ├── api
+│   │   │   │   │   │   ├── common.ts
+│   │   │   │   │   │   ├── defi.ts
+│   │   │   │   │   │   ├── pair.ts
+│   │   │   │   │   │   ├── search.ts
+│   │   │   │   │   │   ├── token.ts
+│   │   │   │   │   │   ├── trader.ts
+│   │   │   │   │   │   └── wallet.ts
+│   │   │   │   │   └── shared.ts
+│   │   │   │   └── utils.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-bittensor
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   └── sn34.ts
+│   │   │   │   ├── evaluators
+│   │   │   │   │   ├── fact.ts
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── providers
+│   │   │   │       ├── index.ts
+│   │   │   │       └── time.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── actions
+│   │   │   │   │   └── sn34.test.ts
+│   │   │   │   └── evaluators
+│   │   │   │       └── fact.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-bnb
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── bridge.ts
+│   │   │   │   │   ├── deploy.ts
+│   │   │   │   │   ├── faucet.ts
+│   │   │   │   │   ├── getBalance.ts
+│   │   │   │   │   ├── stake.ts
+│   │   │   │   │   ├── swap.ts
+│   │   │   │   │   └── transfer.ts
+│   │   │   │   ├── contracts
+│   │   │   │   │   ├── Erc1155Contract.sol
+│   │   │   │   │   ├── Erc20Contract.sol
+│   │   │   │   │   └── Erc721Contract.sol
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── wallet.ts
+│   │   │   │   ├── templates
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── getBalance.test.ts
+│   │   │   │   │   └── wallet.test.ts
+│   │   │   │   ├── types
+│   │   │   │   │   └── index.ts
+│   │   │   │   └── utils
+│   │   │   │       └── contracts.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-bootstrap
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── continue.ts
+│   │   │   │   │   ├── followRoom.ts
+│   │   │   │   │   ├── ignore.ts
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   ├── muteRoom.ts
+│   │   │   │   │   ├── none.ts
+│   │   │   │   │   ├── unfollowRoom.ts
+│   │   │   │   │   └── unmuteRoom.ts
+│   │   │   │   ├── evaluators
+│   │   │   │   │   ├── fact.ts
+│   │   │   │   │   ├── goal.ts
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── providers
+│   │   │   │       ├── boredom.ts
+│   │   │   │       ├── facts.ts
+│   │   │   │       ├── index.ts
+│   │   │   │       └── time.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── actions
+│   │   │   │   │   └── continue.test.ts
+│   │   │   │   └── evaluators
+│   │   │   │       ├── fact.test.ts
+│   │   │   │       └── goal.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-chainbase
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── queryData.ts
+│   │   │   │   │   └── retrieveTokenBalance.ts
+│   │   │   │   ├── constants.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── libs
+│   │   │   │   │   └── chainbase.ts
+│   │   │   │   ├── templates
+│   │   │   │   │   └── index.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── queryData.test.ts
+│   │   │   │   │   └── retrieveTokenBalance.test.ts
+│   │   │   │   └── libs
+│   │   │   │       └── chainbase.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-coinbase
+│   │   │   ├── advanced-sdk-ts
+│   │   │   │   ├── CHANGELOG.md
+│   │   │   │   ├── package.json
+│   │   │   │   ├── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── constants.ts
+│   │   │   │   │   ├── jwt-generator.ts
+│   │   │   │   │   └── rest
+│   │   │   │   │       ├── accounts.ts
+│   │   │   │   │       ├── converts.ts
+│   │   │   │   │       ├── dataAPI.ts
+│   │   │   │   │       ├── errors.ts
+│   │   │   │   │       ├── fees.ts
+│   │   │   │   │       ├── futures.ts
+│   │   │   │   │       ├── index.ts
+│   │   │   │   │       ├── orders.ts
+│   │   │   │   │       ├── payments.ts
+│   │   │   │   │       ├── perpetuals.ts
+│   │   │   │   │       ├── portfolios.ts
+│   │   │   │   │       ├── products.ts
+│   │   │   │   │       ├── public.ts
+│   │   │   │   │       ├── rest-base.ts
+│   │   │   │   │       └── types
+│   │   │   │   │           ├── accounts-types.ts
+│   │   │   │   │           ├── common-types.ts
+│   │   │   │   │           ├── converts-types.ts
+│   │   │   │   │           ├── dataAPI-types.ts
+│   │   │   │   │           ├── fees-types.ts
+│   │   │   │   │           ├── futures-types.ts
+│   │   │   │   │           ├── orders-types.ts
+│   │   │   │   │           ├── payments-types.ts
+│   │   │   │   │           ├── perpetuals-types.ts
+│   │   │   │   │           ├── portfolios-types.ts
+│   │   │   │   │           ├── products-types.ts
+│   │   │   │   │           ├── public-types.ts
+│   │   │   │   │           └── request-types.ts
+│   │   │   │   └── tsconfig.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── constants.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── plugins
+│   │   │   │   │   ├── advancedTrade.ts
+│   │   │   │   │   ├── commerce.ts
+│   │   │   │   │   ├── massPayments.ts
+│   │   │   │   │   ├── tokenContract.ts
+│   │   │   │   │   ├── trade.ts
+│   │   │   │   │   └── webhooks.ts
+│   │   │   │   ├── templates.ts
+│   │   │   │   ├── types.ts
+│   │   │   │   └── utils.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── commerce.test.ts
+│   │   │   │   └── utils.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-coingecko
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── getMarkets.ts
+│   │   │   │   │   ├── getNetworkNewPools.ts
+│   │   │   │   │   ├── getNetworkTrendingPools.ts
+│   │   │   │   │   ├── getNewlyListed.ts
+│   │   │   │   │   ├── getPricePerAddress.ts
+│   │   │   │   │   ├── getPrice.ts
+│   │   │   │   │   ├── getTopGainersLosers.ts
+│   │   │   │   │   ├── getTrendingPools.ts
+│   │   │   │   │   └── getTrending.ts
+│   │   │   │   ├── constants.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   ├── categoriesProvider.ts
+│   │   │   │   │   ├── coinsProvider.ts
+│   │   │   │   │   └── networkProvider.ts
+│   │   │   │   ├── templates
+│   │   │   │   │   ├── gainersLosers.ts
+│   │   │   │   │   ├── markets.ts
+│   │   │   │   │   ├── networkNewPools.ts
+│   │   │   │   │   ├── networkTrendingPools.ts
+│   │   │   │   │   ├── newCoins.ts
+│   │   │   │   │   ├── priceAddress.ts
+│   │   │   │   │   ├── price.ts
+│   │   │   │   │   ├── trendingPools.ts
+│   │   │   │   │   └── trending.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── getMarkets.test.ts
+│   │   │   │   │   ├── getPrice.test.ts
+│   │   │   │   │   ├── getTopGainersLosers.test.ts
+│   │   │   │   │   └── getTrending.test.ts
+│   │   │   │   └── setup.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-coinmarketcap
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── getPrice
+│   │   │   │   │       ├── examples.ts
+│   │   │   │   │       ├── index.ts
+│   │   │   │   │       ├── service.ts
+│   │   │   │   │       ├── template.ts
+│   │   │   │   │       ├── types.ts
+│   │   │   │   │       └── validation.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── getPrice.service.test.ts
+│   │   │   │   │   └── getPrice.test.ts
+│   │   │   │   └── setup.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-conflux
+│   │   │   ├── biome.json
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── abi
+│   │   │   │   │   ├── crossSpaceCall.ts
+│   │   │   │   │   ├── erc20.ts
+│   │   │   │   │   └── meme.ts
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── bridgeTransfer.ts
+│   │   │   │   │   ├── confiPump.ts
+│   │   │   │   │   └── transfer.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── templates
+│   │   │   │   │   ├── bridgeTransfer.ts
+│   │   │   │   │   ├── confiPump.ts
+│   │   │   │   │   └── transfer.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── bridgeTransfer.test.ts
+│   │   │   │   │   └── transfer.test.ts
+│   │   │   │   └── setup.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-cosmos
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── ibc-swap
+│   │   │   │   │   │   ├── index.ts
+│   │   │   │   │   │   ├── schema.ts
+│   │   │   │   │   │   ├── services
+│   │   │   │   │   │   │   ├── ibc-swap-action-service.ts
+│   │   │   │   │   │   │   └── ibc-swap-utils.ts
+│   │   │   │   │   │   └── types.ts
+│   │   │   │   │   ├── ibc-transfer
+│   │   │   │   │   │   ├── index.ts
+│   │   │   │   │   │   ├── schema.ts
+│   │   │   │   │   │   ├── services
+│   │   │   │   │   │   │   ├── bridge-denom-provider.ts
+│   │   │   │   │   │   │   └── ibc-transfer-action-service.ts
+│   │   │   │   │   │   └── types.ts
+│   │   │   │   │   └── transfer
+│   │   │   │   │       ├── index.ts
+│   │   │   │   │       ├── schema.ts
+│   │   │   │   │       ├── services
+│   │   │   │   │       │   └── cosmos-transfer-action-service.ts
+│   │   │   │   │       └── types.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── wallet
+│   │   │   │   │       ├── index.ts
+│   │   │   │   │       └── utils.ts
+│   │   │   │   ├── shared
+│   │   │   │   │   ├── entities
+│   │   │   │   │   │   ├── cosmos-wallet-chains-data.ts
+│   │   │   │   │   │   └── cosmos-wallet.ts
+│   │   │   │   │   ├── helpers
+│   │   │   │   │   │   ├── cosmos-assets.ts
+│   │   │   │   │   │   ├── cosmos-chains.ts
+│   │   │   │   │   │   └── cosmos-transaction-receipt.ts
+│   │   │   │   │   ├── interfaces.ts
+│   │   │   │   │   └── services
+│   │   │   │   │       ├── cosmos-transaction-fee-estimator.ts
+│   │   │   │   │       └── skip-api
+│   │   │   │   │           ├── assets-from-source-fetcher
+│   │   │   │   │           │   ├── interfaces.ts
+│   │   │   │   │           │   ├── schema.ts
+│   │   │   │   │           │   └── skip-api-assets-from-source-fetcher.ts
+│   │   │   │   │           └── config.ts
+│   │   │   │   ├── templates
+│   │   │   │   │   └── index.ts
+│   │   │   │   └── tests
+│   │   │   │       ├── bridge-denom-provider.test.ts
+│   │   │   │       ├── cosmos-assets.test.ts
+│   │   │   │       ├── cosmos-chains.test.ts
+│   │   │   │       ├── cosmos-ibc-swap-action-service.test.ts
+│   │   │   │       ├── cosmos-ibc-transfer-action-service.test.ts
+│   │   │   │       ├── cosmos-transaction-fee-estimator.test.ts
+│   │   │   │       ├── cosmos-transfer-action-service.test.ts
+│   │   │   │       ├── cosmos-wallet-chains-data.test.ts
+│   │   │   │       ├── ibc-swap-utils.test.ts
+│   │   │   │       ├── paid-fee.test.ts
+│   │   │   │       └── skip-api-assets-from-source-fetcher.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-cronos
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── balance.ts
+│   │   │   │   │   └── transfer.ts
+│   │   │   │   ├── constants
+│   │   │   │   │   └── chains.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── wallet.ts
+│   │   │   │   ├── templates
+│   │   │   │   │   └── index.ts
+│   │   │   │   └── types
+│   │   │   │       └── index.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── balance.test.ts
+│   │   │   │   │   └── transfer.test.ts
+│   │   │   │   └── setup.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-cronoszkevm
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   └── transferAction.ts
+│   │   │   │   ├── constants
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── enviroment.ts
+│   │   │   │   ├── hooks
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   ├── useGetAccount.ts
+│   │   │   │   │   └── useGetWalletClient.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── utils
+│   │   │   │       ├── index.ts
+│   │   │   │       └── validateContext.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-dcap
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── on-chain.ts
+│   │   │   │   ├── dcap.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── quote.ts
+│   │   │   │   ├── tests
+│   │   │   │   │   └── on-chain.ts
+│   │   │   │   ├── types.ts
+│   │   │   │   └── utils.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-depin
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── depinProjects.ts
+│   │   │   │   │   └── sentientai.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── depinData.ts
+│   │   │   │   ├── template
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── test
+│   │   │   │   │   ├── depinData.test.ts
+│   │   │   │   │   └── sampleData.ts
+│   │   │   │   └── types
+│   │   │   │       └── depin.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-desk-exchange
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── accountSummary.ts
+│   │   │   │   │   ├── cancelOrders.ts
+│   │   │   │   │   └── perpTrade.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── services
+│   │   │   │   │   ├── account.ts
+│   │   │   │   │   ├── trade.ts
+│   │   │   │   │   └── utils.ts
+│   │   │   │   ├── templates.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-devin
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── startSession.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── providers
+│   │   │   │       ├── devinProvider.ts
+│   │   │   │       └── devinRequests.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── devinProvider.test.ts
+│   │   │   │   ├── mocks
+│   │   │   │   │   └── devinApi.ts
+│   │   │   │   └── startSessionAction.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-dexscreener
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   ├── tokenAction.ts
+│   │   │   │   │   └── trendsAction.ts
+│   │   │   │   ├── evaluators
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   └── tokenEvaluator.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── providers
+│   │   │   │       ├── index.ts
+│   │   │   │       └── tokenProvider.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-di
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── baseInjectableAction.ts
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── decorators
+│   │   │   │   │   ├── content.decorators.ts
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── di.ts
+│   │   │   │   ├── evaluators
+│   │   │   │   │   ├── baseInjectableEvaluator.ts
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── factories
+│   │   │   │   │   ├── charactor.ts
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   └── plugin.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── symbols.ts
+│   │   │   │   ├── templates.ts
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── content.decorators.test.ts
+│   │   │   │   │   └── normalizeCharacter.test.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── tsconfig.build.json
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-dkg
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── dkgInsert.ts
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── constants.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   ├── graphSearch.ts
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── templates.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-echochambers
+│   │   │   ├── biome.json
+│   │   │   ├── LICENSE
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── echoChamberClient.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── interactions.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-edwin
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── provider.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-email
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── clients
+│   │   │   │   │   └── emailClient.ts
+│   │   │   │   ├── config
+│   │   │   │   │   └── email.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── types
+│   │   │   │       ├── config.ts
+│   │   │   │       ├── email.ts
+│   │   │   │       └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-email-automation
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── generateEmailAction.ts
+│   │   │   │   │   └── sendEmailAction.ts
+│   │   │   │   ├── evaluators
+│   │   │   │   │   └── emailEvaluator.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   ├── errors.ts
+│   │   │   │   │   └── resend.ts
+│   │   │   │   ├── schemas
+│   │   │   │   │   └── emailGenerationSchema.ts
+│   │   │   │   ├── services
+│   │   │   │   │   ├── emailAutomationService.ts
+│   │   │   │   │   ├── emailGenerationService.ts
+│   │   │   │   │   ├── emailService.ts
+│   │   │   │   │   ├── emailTemplateManager.ts
+│   │   │   │   │   └── __tests__
+│   │   │   │   │       ├── contextBuilder.test.ts
+│   │   │   │   │       ├── emailAutomationService.test.ts
+│   │   │   │   │       ├── emailGenerationService.test.ts
+│   │   │   │   │       ├── emailParser.test.ts
+│   │   │   │   │       ├── emailService.test.ts
+│   │   │   │   │       ├── emailTemplateManager.test.ts
+│   │   │   │   │       ├── emailThrottling.test.ts
+│   │   │   │   │       └── integration.test.ts
+│   │   │   │   ├── templates
+│   │   │   │   │   ├── emailFormat.ts
+│   │   │   │   │   └── shouldEmail.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-ethstorage
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── submitData.ts
+│   │   │   │   │   └── transfer.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── utils
+│   │   │   │       ├── blobs.ts
+│   │   │   │       └── uploader.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-evm
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── bridge.ts
+│   │   │   │   │   ├── gov-execute.ts
+│   │   │   │   │   ├── gov-propose.ts
+│   │   │   │   │   ├── gov-queue.ts
+│   │   │   │   │   ├── gov-vote.ts
+│   │   │   │   │   ├── swap.ts
+│   │   │   │   │   └── transfer.ts
+│   │   │   │   ├── contracts
+│   │   │   │   │   ├── artifacts
+│   │   │   │   │   │   ├── OZGovernor.json
+│   │   │   │   │   │   ├── TimelockController.json
+│   │   │   │   │   │   └── VoteToken.json
+│   │   │   │   │   └── src
+│   │   │   │   │       ├── OZGovernor.sol
+│   │   │   │   │       ├── TimelockController.sol
+│   │   │   │   │       └── VoteToken.sol
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── wallet.ts
+│   │   │   │   ├── templates
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── gov.test.ts
+│   │   │   │   │   ├── swap.test.ts
+│   │   │   │   │   ├── transfer.test.ts
+│   │   │   │   │   └── wallet.test.ts
+│   │   │   │   └── types
+│   │   │   │       └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-flow
+│   │   │   ├── biome.json
+│   │   │   ├── flow.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── transfer.ts
+│   │   │   │   ├── assets
+│   │   │   │   │   ├── cadence
+│   │   │   │   │   │   ├── scripts
+│   │   │   │   │   │   │   ├── evm
+│   │   │   │   │   │   │   │   ├── call.cdc
+│   │   │   │   │   │   │   │   └── erc20
+│   │   │   │   │   │   │   │       ├── balance_of.cdc
+│   │   │   │   │   │   │   │       ├── get_decimals.cdc
+│   │   │   │   │   │   │   │       └── total_supply.cdc
+│   │   │   │   │   │   │   └── main-account
+│   │   │   │   │   │   │       └── get_acct_info.cdc
+│   │   │   │   │   │   └── transactions
+│   │   │   │   │   │       ├── evm
+│   │   │   │   │   │       │   └── call.cdc
+│   │   │   │   │   │       └── main-account
+│   │   │   │   │   │           ├── account
+│   │   │   │   │   │           │   ├── create_new_account_with_coa.cdc
+│   │   │   │   │   │           │   └── setup_coa.cdc
+│   │   │   │   │   │           ├── evm
+│   │   │   │   │   │           │   └── transfer_erc20.cdc
+│   │   │   │   │   │           ├── flow-token
+│   │   │   │   │   │           │   └── dynamic_vm_transfer.cdc
+│   │   │   │   │   │           └── ft
+│   │   │   │   │   │               └── generic_transfer_with_address.cdc
+│   │   │   │   │   ├── script.defs.ts
+│   │   │   │   │   └── transaction.defs.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   ├── connector.provider.ts
+│   │   │   │   │   ├── utils
+│   │   │   │   │   │   ├── flow.connector.ts
+│   │   │   │   │   │   └── pure.signer.ts
+│   │   │   │   │   └── wallet.provider.ts
+│   │   │   │   ├── queries.ts
+│   │   │   │   ├── templates
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── connector.test.ts
+│   │   │   │   │   └── wallet.test.ts
+│   │   │   │   └── types
+│   │   │   │       ├── exception.ts
+│   │   │   │       ├── fcl.d.ts
+│   │   │   │       └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-football
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── fetchMatchAction.ts
+│   │   │   │   │   └── fetchStandingsAction.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── fetch-standings-action.test.ts
+│   │   │   │   │   └── match-action.test.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-form
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── abi
+│   │   │   │   │   └── curves.json
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── buyCurves.ts
+│   │   │   │   │   ├── depositCurves.ts
+│   │   │   │   │   ├── getCurvesBalance.ts
+│   │   │   │   │   ├── getCurvesBuyPrice.ts
+│   │   │   │   │   ├── getCurvesContract.ts
+│   │   │   │   │   ├── getCurvesERC20.ts
+│   │   │   │   │   ├── getCurvesSellPrice.ts
+│   │   │   │   │   ├── mintCurvesERC20.ts
+│   │   │   │   │   ├── sellCurves.ts
+│   │   │   │   │   └── withdrawCurves.ts
+│   │   │   │   ├── chains
+│   │   │   │   │   ├── form.testnet.ts
+│   │   │   │   │   └── form.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   ├── curves.ts
+│   │   │   │   │   └── wallet.ts
+│   │   │   │   ├── types
+│   │   │   │   │   ├── erc20.ts
+│   │   │   │   │   ├── evm.ts
+│   │   │   │   │   └── index.ts
+│   │   │   │   └── utils
+│   │   │   │       ├── addresses.ts
+│   │   │   │       └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-fuel
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── transfer.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── wallet.ts
+│   │   │   │   ├── templates
+│   │   │   │   │   └── index.ts
+│   │   │   │   └── tests
+│   │   │   │       └── transfer.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-gelato
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── actionContractInteraction.ts
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   ├── etherscan.ts
+│   │   │   │   │   └── wallet.ts
+│   │   │   │   ├── schemas.ts
+│   │   │   │   ├── template.ts
+│   │   │   │   ├── types
+│   │   │   │   │   └── index.ts
+│   │   │   │   └── utils.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-genlayer
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── deployContract.ts
+│   │   │   │   │   ├── getContractSchema.ts
+│   │   │   │   │   ├── getCurrentNonce.ts
+│   │   │   │   │   ├── getTransaction.ts
+│   │   │   │   │   ├── readContract.ts
+│   │   │   │   │   ├── waitForTransactionReceipt.ts
+│   │   │   │   │   └── writeContract.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── client.ts
+│   │   │   │   ├── types
+│   │   │   │   │   └── index.ts
+│   │   │   │   └── utils
+│   │   │   │       └── llm.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-giphy
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── sendGif.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── types.ts
+│   │   │   │   └── utils
+│   │   │   │       └── debug.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-gitbook
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── gitbook.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-gitcoin-passport
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── getScore.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-goat
+│   │   │   ├── biome.json
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── wallet.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-goplus
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── lib
+│   │   │   │   │   └── GoPlusManage.ts
+│   │   │   │   ├── services
+│   │   │   │   │   └── GoplusSecurityService.ts
+│   │   │   │   └── templates
+│   │   │   │       └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-holdstation
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── swapAction.ts
+│   │   │   │   ├── constants
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── hooks
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   ├── useGetAccount.ts
+│   │   │   │   │   └── useGetWalletClient.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── walletProvider.ts
+│   │   │   │   ├── templates
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   └── swapTemplate.ts
+│   │   │   │   └── types
+│   │   │   │       └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-hyperbolic
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── readme.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── actionGetAvailableGpus.ts
+│   │   │   │   │   ├── actionGetCurrentBalance.ts
+│   │   │   │   │   ├── actionGetGpuStatus.ts
+│   │   │   │   │   ├── actionGetSpendHistory.ts
+│   │   │   │   │   ├── actionRentCompute.ts
+│   │   │   │   │   └── actionTerminateCompute.ts
+│   │   │   │   ├── assets
+│   │   │   │   │   └── hyperbolic.png
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── error
+│   │   │   │   │   ├── base.ts
+│   │   │   │   │   ├── configuration.ts
+│   │   │   │   │   └── validation.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── utils
+│   │   │   │       ├── api.ts
+│   │   │   │       ├── parseGpuInstance.ts
+│   │   │   │       ├── parseGpuRent.ts
+│   │   │   │       └── ssh-manager.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-hyperliquid
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── cancelOrders.ts
+│   │   │   │   │   ├── priceCheck.ts
+│   │   │   │   │   └── spotTrade.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── templates.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-icp
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── createToken.ts
+│   │   │   │   │   └── prompts
+│   │   │   │   │       └── token.ts
+│   │   │   │   ├── apis
+│   │   │   │   │   └── uploadFile.ts
+│   │   │   │   ├── canisters
+│   │   │   │   │   └── pick-pump
+│   │   │   │   │       ├── index.did.d.ts
+│   │   │   │   │       └── index.did.ts
+│   │   │   │   ├── constants
+│   │   │   │   │   ├── apis.ts
+│   │   │   │   │   └── canisters.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── wallet.ts
+│   │   │   │   ├── types.ts
+│   │   │   │   └── utils
+│   │   │   │       ├── arrays.ts
+│   │   │   │       ├── common
+│   │   │   │       │   ├── data
+│   │   │   │       │   │   └── json.ts
+│   │   │   │       │   └── types
+│   │   │   │       │       ├── bigint.ts
+│   │   │   │       │       ├── options.ts
+│   │   │   │       │       ├── results.ts
+│   │   │   │       │       └── variant.ts
+│   │   │   │       ├── ic
+│   │   │   │       │   ├── index.ts
+│   │   │   │       │   └── principals.ts
+│   │   │   │       └── number.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-image-generation
+│   │   │   ├── package.json
+│   │   │   ├── README.MD
+│   │   │   ├── src
+│   │   │   │   ├── environment.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-imgflip
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── generate-meme.ts
+│   │   │   │   │   └── index.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-initia
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── transfer.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── wallet.ts
+│   │   │   │   └── tests
+│   │   │   │       └── wallet.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-injective
+│   │   │   ├── injective-sdk-client-ts
+│   │   │   │   ├── package.json
+│   │   │   │   ├── Readme.md
+│   │   │   │   ├── src
+│   │   │   │   │   ├── examples
+│   │   │   │   │   │   ├── auction.ts
+│   │   │   │   │   │   ├── auth.ts
+│   │   │   │   │   │   ├── bank.ts
+│   │   │   │   │   │   ├── distribution.ts
+│   │   │   │   │   │   ├── exchange.ts
+│   │   │   │   │   │   ├── explorer.ts
+│   │   │   │   │   │   ├── gov.ts
+│   │   │   │   │   │   ├── ibc.ts
+│   │   │   │   │   │   ├── insurance.ts
+│   │   │   │   │   │   ├── mint.ts
+│   │   │   │   │   │   ├── mito.ts
+│   │   │   │   │   │   ├── peggy.ts
+│   │   │   │   │   │   ├── permissions.ts
+│   │   │   │   │   │   ├── staking.ts
+│   │   │   │   │   │   ├── token-factory.ts
+│   │   │   │   │   │   └── wasm.ts
+│   │   │   │   │   ├── exceptions
+│   │   │   │   │   │   ├── GrpcException.ts
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── grpc
+│   │   │   │   │   │   └── grpc-base.ts
+│   │   │   │   │   ├── modules
+│   │   │   │   │   │   ├── auction.ts
+│   │   │   │   │   │   ├── auth.ts
+│   │   │   │   │   │   ├── authz.ts
+│   │   │   │   │   │   ├── bank.ts
+│   │   │   │   │   │   ├── distribution.ts
+│   │   │   │   │   │   ├── exchange.ts
+│   │   │   │   │   │   ├── explorer.ts
+│   │   │   │   │   │   ├── gov.ts
+│   │   │   │   │   │   ├── Ibc.ts
+│   │   │   │   │   │   ├── index.ts
+│   │   │   │   │   │   ├── insurance.ts
+│   │   │   │   │   │   ├── mint.ts
+│   │   │   │   │   │   ├── mito.ts
+│   │   │   │   │   │   ├── oracle.ts
+│   │   │   │   │   │   ├── peggy.ts
+│   │   │   │   │   │   ├── permissions.ts
+│   │   │   │   │   │   ├── staking.ts
+│   │   │   │   │   │   ├── token-factory.ts
+│   │   │   │   │   │   ├── wasm.ts
+│   │   │   │   │   │   └── wasmx.ts
+│   │   │   │   │   ├── similes
+│   │   │   │   │   │   ├── auction.ts
+│   │   │   │   │   │   ├── auth.ts
+│   │   │   │   │   │   ├── bank.ts
+│   │   │   │   │   │   ├── distribution.ts
+│   │   │   │   │   │   ├── exchange.ts
+│   │   │   │   │   │   ├── explorer.ts
+│   │   │   │   │   │   ├── gov.ts
+│   │   │   │   │   │   ├── ibc.ts
+│   │   │   │   │   │   ├── insurance.ts
+│   │   │   │   │   │   ├── mint.ts
+│   │   │   │   │   │   ├── mito.ts
+│   │   │   │   │   │   ├── peggy.ts
+│   │   │   │   │   │   ├── permissions.ts
+│   │   │   │   │   │   ├── staking.ts
+│   │   │   │   │   │   ├── token-factory.ts
+│   │   │   │   │   │   └── wasm.ts
+│   │   │   │   │   ├── template
+│   │   │   │   │   │   ├── auction.ts
+│   │   │   │   │   │   ├── auth.ts
+│   │   │   │   │   │   ├── bank.ts
+│   │   │   │   │   │   ├── base.ts
+│   │   │   │   │   │   ├── distribution.ts
+│   │   │   │   │   │   ├── exchange.ts
+│   │   │   │   │   │   ├── explorer.ts
+│   │   │   │   │   │   ├── gov.ts
+│   │   │   │   │   │   ├── ibc.ts
+│   │   │   │   │   │   ├── index.ts
+│   │   │   │   │   │   ├── insurance.ts
+│   │   │   │   │   │   ├── mint.ts
+│   │   │   │   │   │   ├── mito.ts
+│   │   │   │   │   │   ├── peggy.ts
+│   │   │   │   │   │   ├── permissions.ts
+│   │   │   │   │   │   ├── staking.ts
+│   │   │   │   │   │   ├── token-factory.ts
+│   │   │   │   │   │   └── wasm.ts
+│   │   │   │   │   └── types
+│   │   │   │   │       ├── auction.ts
+│   │   │   │   │       ├── auth.ts
+│   │   │   │   │       ├── bank.ts
+│   │   │   │   │       ├── base.ts
+│   │   │   │   │       ├── distribution.ts
+│   │   │   │   │       ├── exchange.ts
+│   │   │   │   │       ├── explorer.ts
+│   │   │   │   │       ├── gov.ts
+│   │   │   │   │       ├── ibc.ts
+│   │   │   │   │       ├── index.ts
+│   │   │   │   │       ├── insurance.ts
+│   │   │   │   │       ├── mint.ts
+│   │   │   │   │       ├── mito.ts
+│   │   │   │   │       ├── peggy.ts
+│   │   │   │   │       ├── permissions.ts
+│   │   │   │   │       ├── staking.ts
+│   │   │   │   │       ├── token-factory.ts
+│   │   │   │   │       └── wasm.ts
+│   │   │   │   ├── tsconfig.json
+│   │   │   │   └── tsup.config.ts
+│   │   │   ├── jest.config.js
+│   │   │   ├── package.json
+│   │   │   ├── Readme.md
+│   │   │   ├── src
+│   │   │   │   ├── action
+│   │   │   │   │   ├── auction.ts
+│   │   │   │   │   ├── auth.ts
+│   │   │   │   │   ├── bank.ts
+│   │   │   │   │   ├── base.ts
+│   │   │   │   │   ├── distribution.ts
+│   │   │   │   │   ├── exchange.ts
+│   │   │   │   │   ├── explorer.ts
+│   │   │   │   │   ├── gov.ts
+│   │   │   │   │   ├── ibc.ts
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   ├── insurance.ts
+│   │   │   │   │   ├── mint.ts
+│   │   │   │   │   ├── mito.ts
+│   │   │   │   │   ├── peggy.ts
+│   │   │   │   │   ├── permissions.ts
+│   │   │   │   │   ├── staking.ts
+│   │   │   │   │   ├── token-factory.ts
+│   │   │   │   │   └── wasm.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-intiface
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── intiface-engine
+│   │   │   │   ├── CHANGELOG.md
+│   │   │   │   ├── intiface-engine
+│   │   │   │   └── README.md
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── intiface-user-device-config.json
+│   │   │   │   └── utils.ts
+│   │   │   ├── test
+│   │   │   │   ├── buttplug-user-device-config-test.json
+│   │   │   │   ├── fake-buttplug.ts
+│   │   │   │   └── simulate.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-iq6900
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── functions
+│   │   │   │   │   └── bringIQData.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── types
+│   │   │   │       └── iq.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-irys
+│   │   │   ├── OrchestratorDiagram.png
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── index.ts
+│   │   │   │   └── services
+│   │   │   │       ├── irysService_bk.ts
+│   │   │   │       └── irysService.ts
+│   │   │   ├── tests
+│   │   │   │   ├── provider.test.ts
+│   │   │   │   ├── wallet.test.ts
+│   │   │   │   └── worker.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-lens-network
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── transfer.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-letzai
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index-test.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-lightning
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── createInvoice.ts
+│   │   │   │   │   └── payInvoice.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── lightning.ts
+│   │   │   │   ├── templates
+│   │   │   │   │   └── index.ts
+│   │   │   │   └── types
+│   │   │   │       └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-lit
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── helloLit
+│   │   │   │   │   │   ├── helloLitAction.ts
+│   │   │   │   │   │   └── helloLit.ts
+│   │   │   │   │   └── tools
+│   │   │   │   │       ├── ecdsaSign
+│   │   │   │   │       │   ├── ipfs.ts
+│   │   │   │   │       │   ├── lit-actions
+│   │   │   │   │       │   │   ├── policy.ts
+│   │   │   │   │       │   │   ├── tool.ts
+│   │   │   │   │       │   │   └── utils
+│   │   │   │   │       │   │       └── sign-message.ts
+│   │   │   │   │       │   ├── policy.ts
+│   │   │   │   │       │   ├── toolCall.ts
+│   │   │   │   │       │   └── tool.ts
+│   │   │   │   │       ├── erc20transfer
+│   │   │   │   │       │   ├── ipfs.ts
+│   │   │   │   │       │   ├── lit-actions
+│   │   │   │   │       │   │   ├── policy.ts
+│   │   │   │   │       │   │   ├── tool.ts
+│   │   │   │   │       │   │   └── utils
+│   │   │   │   │       │   │       ├── broadcast-tx.ts
+│   │   │   │   │       │   │       ├── create-and-sign-tx.ts
+│   │   │   │   │       │   │       ├── estimate-gas-limit.ts
+│   │   │   │   │       │   │       ├── get-erc20-info.ts
+│   │   │   │   │       │   │       └── get-gas-data.ts
+│   │   │   │   │       │   ├── policy.ts
+│   │   │   │   │       │   ├── toolCall.ts
+│   │   │   │   │       │   └── tool.ts
+│   │   │   │   │       └── uniswapSwap
+│   │   │   │   │           ├── ipfs.ts
+│   │   │   │   │           ├── lit-actions
+│   │   │   │   │           │   ├── policy.ts
+│   │   │   │   │           │   ├── tool.ts
+│   │   │   │   │           │   └── utils
+│   │   │   │   │           │       ├── broadcast-tx.ts
+│   │   │   │   │           │       ├── create-tx.ts
+│   │   │   │   │           │       ├── estimate-gas-limit.ts
+│   │   │   │   │           │       ├── get-best-quote.ts
+│   │   │   │   │           │       ├── get-gas-data.ts
+│   │   │   │   │           │       ├── get-token-info.ts
+│   │   │   │   │           │       ├── get-uniswap-quotor-router.ts
+│   │   │   │   │           │       ├── index.ts
+│   │   │   │   │           │       └── sign-tx.ts
+│   │   │   │   │           ├── policy.ts
+│   │   │   │   │           ├── toolCall.ts
+│   │   │   │   │           └── tool.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── templates
+│   │   │   │       └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-massa
+│   │   │   ├── package.json
+│   │   │   ├── readme.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── transfer.ts
+│   │   │   │   ├── enviroment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── utils
+│   │   │   │       ├── address.ts
+│   │   │   │       ├── index.ts
+│   │   │   │       └── mns.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-mina
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── balance.ts
+│   │   │   │   │   ├── faucet.ts
+│   │   │   │   │   └── transfer.ts
+│   │   │   │   ├── constants.ts
+│   │   │   │   ├── enviroment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── wallet.ts
+│   │   │   │   ├── tests
+│   │   │   │   │   └── wallet.test.ts
+│   │   │   │   └── utils.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-mind-network
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── checkRewardAction.ts
+│   │   │   │   │   ├── encryptAction.ts
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   ├── registerAction.ts
+│   │   │   │   │   └── submitVoteAction.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── utils
+│   │   │   │       └── cache.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-moralis
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── solana
+│   │   │   │   │       ├── getPairOHLCV.ts
+│   │   │   │   │       ├── getPairStats.ts
+│   │   │   │   │       ├── getTokenMetadata.ts
+│   │   │   │   │       ├── getTokenPairs.ts
+│   │   │   │   │       ├── getTokenPrice.ts
+│   │   │   │   │       └── getTokenStats.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── templates
+│   │   │   │   │   ├── pairOHLCV.ts
+│   │   │   │   │   ├── pairStats.ts
+│   │   │   │   │   ├── tokenMetadata.ts
+│   │   │   │   │   ├── tokenPairs.ts
+│   │   │   │   │   ├── tokenPrice.ts
+│   │   │   │   │   └── tokenStats.ts
+│   │   │   │   ├── types
+│   │   │   │   │   └── solana.ts
+│   │   │   │   └── utils
+│   │   │   │       └── constants.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-movement
+│   │   │   ├── package.json
+│   │   │   ├── readme.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── transfer.ts
+│   │   │   │   ├── constants.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── wallet.ts
+│   │   │   │   └── tests
+│   │   │   │       ├── transfer.test.ts
+│   │   │   │       └── wallet.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-multiversx
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── createLiquidityPool.ts
+│   │   │   │   │   ├── createToken.ts
+│   │   │   │   │   ├── swap.ts
+│   │   │   │   │   └── transfer.ts
+│   │   │   │   ├── constants.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── graphql
+│   │   │   │   │   ├── createLiquidityPoolQueries.ts
+│   │   │   │   │   ├── swapQuery.ts
+│   │   │   │   │   └── tokensQuery.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── models
+│   │   │   │   │   └── inputToken.model.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   ├── graphql.ts
+│   │   │   │   │   ├── nativeAuth.ts
+│   │   │   │   │   └── wallet.ts
+│   │   │   │   ├── tests
+│   │   │   │   │   └── wallet.test.ts
+│   │   │   │   └── utils
+│   │   │   │       ├── accessTokenManagement.ts
+│   │   │   │       ├── amount.ts
+│   │   │   │       ├── getToken.ts
+│   │   │   │       ├── resolveHerotag.ts
+│   │   │   │       └── schemas.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-near
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── swap.ts
+│   │   │   │   │   └── transfer.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── providers
+│   │   │   │       └── wallet.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-news
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   └── news.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-nft-collections
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── get-collections.ts
+│   │   │   │   │   ├── list-nft.ts
+│   │   │   │   │   └── sweep-floor.ts
+│   │   │   │   ├── constants
+│   │   │   │   │   ├── collections.ts
+│   │   │   │   │   └── curated-collections.ts
+│   │   │   │   ├── evaluators
+│   │   │   │   │   └── nft-knowledge.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── nft-collections.ts
+│   │   │   │   ├── services
+│   │   │   │   │   ├── cache-manager.ts
+│   │   │   │   │   ├── coingecko.ts
+│   │   │   │   │   ├── market-intelligence.ts
+│   │   │   │   │   ├── rate-limiter.ts
+│   │   │   │   │   ├── reservoir.ts
+│   │   │   │   │   ├── security-manager.ts
+│   │   │   │   │   └── social-analytics.ts
+│   │   │   │   ├── templates
+│   │   │   │   │   ├── floor-sweep.ts
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   ├── market-stats.ts
+│   │   │   │   │   ├── nft-listing.ts
+│   │   │   │   │   └── social-analytics.ts
+│   │   │   │   ├── __tests__
+│   │   │   │   │   └── reservoir.test.ts
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── actions.test.ts
+│   │   │   │   │   ├── providers.test.ts
+│   │   │   │   │   ├── services.test.ts
+│   │   │   │   │   └── templates.test.ts
+│   │   │   │   ├── types.ts
+│   │   │   │   └── utils
+│   │   │   │       ├── error-handler.ts
+│   │   │   │       ├── performance.ts
+│   │   │   │       ├── response-enhancer.ts
+│   │   │   │       └── validation.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-nft-generation
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── mintNFTAction.ts
+│   │   │   │   │   └── nftCollectionGeneration.ts
+│   │   │   │   ├── api.ts
+│   │   │   │   ├── contract
+│   │   │   │   │   └── CustomERC721.sol
+│   │   │   │   ├── handlers
+│   │   │   │   │   ├── createNFT.ts
+│   │   │   │   │   ├── createSolanaCollection.ts
+│   │   │   │   │   └── verifyNFT.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── provider
+│   │   │   │   │   └── wallet
+│   │   │   │   │       └── walletSolana.ts
+│   │   │   │   ├── solModule.d.ts
+│   │   │   │   ├── templates.ts
+│   │   │   │   ├── types.ts
+│   │   │   │   └── utils
+│   │   │   │       ├── deployEVMContract.ts
+│   │   │   │       ├── generateERC721ContractCode.ts
+│   │   │   │       └── verifyEVMContract.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-node
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── scripts
+│   │   │   │   └── postinstall.js
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── describe-image.ts
+│   │   │   │   ├── echogarden.d.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── services
+│   │   │   │   │   ├── audioUtils.ts
+│   │   │   │   │   ├── awsS3.ts
+│   │   │   │   │   ├── browser.ts
+│   │   │   │   │   ├── image.ts
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   ├── llama.ts
+│   │   │   │   │   ├── pdf.ts
+│   │   │   │   │   ├── speech.ts
+│   │   │   │   │   ├── transcription.ts
+│   │   │   │   │   └── video.ts
+│   │   │   │   ├── templates.ts
+│   │   │   │   ├── types.ts
+│   │   │   │   └── vendor
+│   │   │   │       └── vitsVoiceList.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-nvidia-nim
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── actionGetAIImage.ts
+│   │   │   │   │   ├── actionGetCosmos.ts
+│   │   │   │   │   ├── actionGetDeepFake.ts
+│   │   │   │   │   ├── actionGetJailBreak.ts
+│   │   │   │   │   ├── actionGetSafety.ts
+│   │   │   │   │   └── actionGetTopic.ts
+│   │   │   │   ├── assets
+│   │   │   │   │   ├── aiimage
+│   │   │   │   │   │   └── test_ai.jpg
+│   │   │   │   │   ├── cosmos
+│   │   │   │   │   │   ├── videos
+│   │   │   │   │   │   │   └── cosmos_vid_1737441639027.mp4
+│   │   │   │   │   │   ├── wh_test.mp4
+│   │   │   │   │   │   └── wh_test.png
+│   │   │   │   │   ├── deepfake
+│   │   │   │   │   │   └── deepfake.jpg
+│   │   │   │   │   └── nvidia_nim.jpg
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── errors
+│   │   │   │   │   └── nimErrors.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── types
+│   │   │   │   │   ├── aiImage.ts
+│   │   │   │   │   ├── cosmos.ts
+│   │   │   │   │   ├── deepfake.ts
+│   │   │   │   │   ├── jailbreak.ts
+│   │   │   │   │   ├── offTopic.ts
+│   │   │   │   │   └── safety.ts
+│   │   │   │   └── utils
+│   │   │   │       ├── aiImagePromptParser.ts
+│   │   │   │       ├── alphafoldPromptParser.ts
+│   │   │   │       ├── assetManager.ts
+│   │   │   │       ├── cosmosPromptParser.ts
+│   │   │   │       ├── deepfakePromptParser.ts
+│   │   │   │       ├── jailbreakPromptParser.ts
+│   │   │   │       ├── offTopicPromptParser.ts
+│   │   │   │       ├── promptParser.ts
+│   │   │   │       ├── safetyPromptParser.ts
+│   │   │   │       └── validation.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-obsidian
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── activeNote.ts
+│   │   │   │   │   ├── createKnowledge.ts
+│   │   │   │   │   ├── file.ts
+│   │   │   │   │   ├── listNotes.ts
+│   │   │   │   │   ├── noteTraversal.ts
+│   │   │   │   │   ├── note.ts
+│   │   │   │   │   ├── openFile.ts
+│   │   │   │   │   ├── saveFile.ts
+│   │   │   │   │   ├── search.ts
+│   │   │   │   │   ├── updateFile.ts
+│   │   │   │   │   ├── vaultDirectory.ts
+│   │   │   │   │   └── vault.ts
+│   │   │   │   ├── enviroment.ts
+│   │   │   │   ├── example
+│   │   │   │   │   ├── naval.character.json
+│   │   │   │   │   └── NAVALS-VAULT.md
+│   │   │   │   ├── helper.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── obsidianClient.ts
+│   │   │   │   ├── templates
+│   │   │   │   │   ├── file.ts
+│   │   │   │   │   ├── note.ts
+│   │   │   │   │   ├── summary.ts
+│   │   │   │   │   └── traversal.ts
+│   │   │   │   ├── tests
+│   │   │   │   │   └── obsidianClient.test.ts
+│   │   │   │   └── types
+│   │   │   │       └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-omniflix
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── action_examples
+│   │   │   │   │   ├── bank
+│   │   │   │   │   │   ├── balance.ts
+│   │   │   │   │   │   ├── send_tokens.ts
+│   │   │   │   │   │   └── stake_balance.ts
+│   │   │   │   │   ├── gov
+│   │   │   │   │   │   └── vote_on_proposal.ts
+│   │   │   │   │   └── staking
+│   │   │   │   │       ├── cancel_unbonding.ts
+│   │   │   │   │       ├── delegate_token.ts
+│   │   │   │   │       ├── redelegate.ts
+│   │   │   │   │       └── undelegate_token.ts
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── bank
+│   │   │   │   │   │   ├── balance.ts
+│   │   │   │   │   │   ├── index.ts
+│   │   │   │   │   │   ├── send_tokens.ts
+│   │   │   │   │   │   └── stake_balance.ts
+│   │   │   │   │   ├── gov
+│   │   │   │   │   │   ├── index.ts
+│   │   │   │   │   │   └── vote_on_proposal.ts
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   └── staking
+│   │   │   │   │       ├── cancel_unbonding.ts
+│   │   │   │   │       ├── delegate_token.ts
+│   │   │   │   │       ├── index.ts
+│   │   │   │   │       ├── redelegate.ts
+│   │   │   │   │       └── undelegate_token.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   ├── bank.ts
+│   │   │   │   │   ├── gov.ts
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   ├── staking.ts
+│   │   │   │   │   └── wallet.ts
+│   │   │   │   └── types
+│   │   │   │       └── token.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-opacity
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── index.ts
+│   │   │   │   └── utils
+│   │   │   │       └── api.ts
+│   │   │   └── tsconfig.json
+│   │   ├── plugin-openai
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── action.ts
+│   │   │   │   │   ├── analyzeSentimentAction.ts
+│   │   │   │   │   ├── editTextAction.ts
+│   │   │   │   │   ├── generateEmbeddingAction.ts
+│   │   │   │   │   ├── generateTextAction.ts
+│   │   │   │   │   ├── moderateContentAction.ts
+│   │   │   │   │   └── transcribeAudioAction.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── types.ts
+│   │   │   └── tsconfig.json
+│   │   ├── plugin-open-weather
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── getCurrentWeather.ts
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── examples.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── services.ts
+│   │   │   │   ├── templates.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-primus
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── postTweetAction.ts
+│   │   │   │   ├── adapter
+│   │   │   │   │   └── primusAdapter.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   ├── tokenPriceProvider.ts
+│   │   │   │   │   └── tweetProvider.ts
+│   │   │   │   ├── templates.ts
+│   │   │   │   └── util
+│   │   │   │       ├── primusUtil.ts
+│   │   │   │       └── twitterScraper.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-pyth-data
+│   │   │   ├── assets
+│   │   │   │   └── Pyth.jpg
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── readme.md
+│   │   │   ├── schema.json
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── actionGetLatestPriceUpdates.ts
+│   │   │   │   │   ├── actionGetLatestPublisherCaps.ts
+│   │   │   │   │   ├── actionGetPriceFeeds.ts
+│   │   │   │   │   └── actionGetPriceUpdatesStream.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── error
+│   │   │   │   │   ├── base.ts
+│   │   │   │   │   ├── data.ts
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   ├── runtime.ts
+│   │   │   │   │   └── websocket.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── price_feeds
+│   │   │   │   │   ├── price_feed_ids.json
+│   │   │   │   │   └── schema.json
+│   │   │   │   ├── types
+│   │   │   │   │   ├── eventsource.d.ts
+│   │   │   │   │   ├── jstat.d.ts
+│   │   │   │   │   └── zodSchemas.ts
+│   │   │   │   └── utils
+│   │   │   │       ├── priceFeedsValidation.ts
+│   │   │   │       ├── priceUpdateStreamValidation.ts
+│   │   │   │       ├── priceUpdatesValidation.ts
+│   │   │   │       └── publisherCapsValidation.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-quai
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── readme.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── transfer.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── utils
+│   │   │   │       └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-quick-intel
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── audit.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── templates
+│   │   │   │   │   └── index.ts
+│   │   │   │   └── utils
+│   │   │   │       └── chain-detection.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-rabbi-trader
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── readme.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── analyzeTrade.ts
+│   │   │   │   ├── actions.ts
+│   │   │   │   ├── config.ts
+│   │   │   │   ├── constants.ts
+│   │   │   │   ├── dexscreener.ts
+│   │   │   │   ├── evaluators
+│   │   │   │   │   └── trust.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   ├── token.ts
+│   │   │   │   │   └── trustScoreProvider.ts
+│   │   │   │   ├── services
+│   │   │   │   │   ├── simulationService.ts
+│   │   │   │   │   └── twitter.ts
+│   │   │   │   ├── swap.ts
+│   │   │   │   ├── tokenUtils.ts
+│   │   │   │   ├── types
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   └── token.ts
+│   │   │   │   ├── utils
+│   │   │   │   │   └── bignumber.ts
+│   │   │   │   ├── utils.ts
+│   │   │   │   └── wallet.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── dexscreener.test.ts
+│   │   │   │   ├── tokenUtils.test.ts
+│   │   │   │   └── wallet.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-router-nitro
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── chains.ts
+│   │   │   │   │   ├── executeSwap_bk.ts
+│   │   │   │   │   ├── executeSwap.ts
+│   │   │   │   │   ├── swapTemplate.ts
+│   │   │   │   │   ├── txns_bk.ts
+│   │   │   │   │   ├── txns.ts
+│   │   │   │   │   └── utils.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-sei
+│   │   │   ├── eslint.config.mjs
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── transfer.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── wallet.ts
+│   │   │   │   ├── tests
+│   │   │   │   │   └── transfer.test.ts
+│   │   │   │   └── types
+│   │   │   │       ├── index.ts
+│   │   │   │       └── precompiles.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-sgx
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── plugins
+│   │   │   │   │   └── sgxPlugin.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── sgxAttestationProvider.ts
+│   │   │   │   └── types
+│   │   │   │       └── attestation.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-solana
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.MD
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── fomo.ts
+│   │   │   │   │   ├── pumpfun.ts
+│   │   │   │   │   ├── swapDao.ts
+│   │   │   │   │   ├── swap.ts
+│   │   │   │   │   ├── swapUtils.ts
+│   │   │   │   │   ├── takeOrder.ts
+│   │   │   │   │   ├── transfer_sol.ts
+│   │   │   │   │   └── transfer.ts
+│   │   │   │   ├── bignumber.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── evaluators
+│   │   │   │   │   └── trust.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── keypairUtils.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   ├── orderBook.ts
+│   │   │   │   │   ├── simulationSellingService.ts
+│   │   │   │   │   ├── token.ts
+│   │   │   │   │   ├── tokenUtils.ts
+│   │   │   │   │   ├── trustScoreProvider.ts
+│   │   │   │   │   └── wallet.ts
+│   │   │   │   └── types
+│   │   │   │       └── token.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── actions
+│   │   │   │   │   └── swap.test.ts
+│   │   │   │   ├── evaluators
+│   │   │   │   │   └── trust.test.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── token-security.test.ts
+│   │   │   │   └── token.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-solana-agent-kit
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── createToken.ts
+│   │   │   │   │   ├── getTokenInfo.ts
+│   │   │   │   │   ├── gibwork.ts
+│   │   │   │   │   ├── lend.ts
+│   │   │   │   │   ├── stake.ts
+│   │   │   │   │   ├── swap.ts
+│   │   │   │   │   └── transfer.ts
+│   │   │   │   ├── client.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── keypairUtils.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-solana-v2
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── orca
+│   │   │   │   │       └── managePositions.ts
+│   │   │   │   ├── character
+│   │   │   │   │   └── orca
+│   │   │   │   │       └── lpmanager.character.json
+│   │   │   │   ├── evaluators
+│   │   │   │   │   └── orca
+│   │   │   │   │       └── repositionEvaluator.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── orca
+│   │   │   │   │       └── positionProvider.ts
+│   │   │   │   └── utils
+│   │   │   │       ├── loadWallet.ts
+│   │   │   │       ├── sendMessage.ts
+│   │   │   │       ├── sendTransaction.ts
+│   │   │   │       └── TEE
+│   │   │   │           ├── deriveKeyProvider.ts
+│   │   │   │           ├── remoteAttestationProvider.ts
+│   │   │   │           └── types.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-spheron
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── deployment.ts
+│   │   │   │   │   └── escrow.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   ├── deployment.ts
+│   │   │   │   │   └── tokens.ts
+│   │   │   │   ├── types
+│   │   │   │   │   └── index.ts
+│   │   │   │   └── utils
+│   │   │   │       ├── constants.ts
+│   │   │   │       ├── index.ts
+│   │   │   │       └── template.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-squid-router
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── xChainSwap.ts
+│   │   │   │   ├── helpers
+│   │   │   │   │   └── utils.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── squidRouter.ts
+│   │   │   │   ├── templates
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── tests
+│   │   │   │   │   └── router.test.ts
+│   │   │   │   └── types
+│   │   │   │       └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-stargaze
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── getCollectionStats.ts
+│   │   │   │   │   ├── getLatestNFT.ts
+│   │   │   │   │   └── getTokenSales.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── types.ts
+│   │   │   │   └── utils
+│   │   │   │       └── debug.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-starknet
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── generate.ts
+│   │   │   │   │   ├── subdomain.ts
+│   │   │   │   │   ├── swap.ts
+│   │   │   │   │   ├── takeOrder.ts
+│   │   │   │   │   ├── transfer.ts
+│   │   │   │   │   └── unruggable.ts
+│   │   │   │   ├── environment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   ├── portfolioProvider.ts
+│   │   │   │   │   ├── token.ts
+│   │   │   │   │   ├── trustScoreProvider.ts
+│   │   │   │   │   └── utils.ts
+│   │   │   │   ├── types
+│   │   │   │   │   ├── token.ts
+│   │   │   │   │   └── trustDB.ts
+│   │   │   │   └── utils
+│   │   │   │       ├── cache.ts
+│   │   │   │       ├── constants.ts
+│   │   │   │       ├── erc20.json
+│   │   │   │       ├── ERC20Token.ts
+│   │   │   │       ├── index.ts
+│   │   │   │       └── starknetId.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-story
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── attachTerms.ts
+│   │   │   │   │   ├── getAvailableLicenses.ts
+│   │   │   │   │   ├── getIPDetails.ts
+│   │   │   │   │   ├── licenseIP.ts
+│   │   │   │   │   └── registerIP.ts
+│   │   │   │   ├── functions
+│   │   │   │   │   └── uploadJSONToIPFS.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── lib
+│   │   │   │   │   ├── api.ts
+│   │   │   │   │   └── utils.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── wallet.ts
+│   │   │   │   ├── queries.ts
+│   │   │   │   ├── templates
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── tests
+│   │   │   │   │   └── wallet.test.ts
+│   │   │   │   └── types
+│   │   │   │       ├── api.ts
+│   │   │   │       └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-sui
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── swap.ts
+│   │   │   │   │   └── transfer.ts
+│   │   │   │   ├── enviroment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── wallet.ts
+│   │   │   │   ├── services
+│   │   │   │   │   └── sui.ts
+│   │   │   │   ├── tests
+│   │   │   │   │   └── wallet.test.ts
+│   │   │   │   ├── tokens.ts
+│   │   │   │   └── utils.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-suno
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── customGenerate.ts
+│   │   │   │   │   ├── extend.ts
+│   │   │   │   │   └── generate.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── suno.ts
+│   │   │   │   └── types
+│   │   │   │       └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-tee
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── remoteAttestation.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   ├── deriveKeyProvider.ts
+│   │   │   │   │   ├── remoteAttestationProvider.ts
+│   │   │   │   │   └── walletProvider.ts
+│   │   │   │   └── types
+│   │   │   │       └── tee.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── deriveKey.test.ts
+│   │   │   │   ├── remoteAttestationAction.test.ts
+│   │   │   │   ├── remoteAttestation.test.ts
+│   │   │   │   └── timeout.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-tee-log
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── adapters
+│   │   │   │   │   ├── sqliteDAO.ts
+│   │   │   │   │   └── sqliteTables.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── plugins
+│   │   │   │   │   └── teeLogPlugin.ts
+│   │   │   │   ├── services
+│   │   │   │   │   ├── teeLogManager.ts
+│   │   │   │   │   └── teeLogService.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-tee-marlin
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── remoteAttestation.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-tee-verifiable-log
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── adapters
+│   │   │   │   │   └── sqliteVerifiableDAO.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   ├── dreriveProvider.ts
+│   │   │   │   │   └── verifiableLogProvider.ts
+│   │   │   │   ├── test
+│   │   │   │   │   ├── deriveProvider.test.ts
+│   │   │   │   │   └── providers.test.ts
+│   │   │   │   └── types
+│   │   │   │       └── logTypes.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-thirdweb
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── chat.ts
+│   │   │   │   │   └── index.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-ton
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── screenshot
+│   │   │   │   └── transfer.png
+│   │   │   ├── scripts
+│   │   │   │   ├── debug.sh
+│   │   │   │   └── generate-ton-mnemonic.ts
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── getCollectionData.ts
+│   │   │   │   │   ├── mintNFT.ts
+│   │   │   │   │   ├── transferNFT.ts
+│   │   │   │   │   ├── transfer.ts
+│   │   │   │   │   └── updateNFTMetadata.ts
+│   │   │   │   ├── enviroment.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── wallet.ts
+│   │   │   │   ├── tests
+│   │   │   │   │   └── wallet.test.ts
+│   │   │   │   └── utils
+│   │   │   │       ├── NFTCollection.ts
+│   │   │   │       ├── NFTItem.ts
+│   │   │   │       └── util.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-trikon
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── readme.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── trikon.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── plugins
+│   │   │   │   │   └── trikonPlugin.ts
+│   │   │   │   └── providers
+│   │   │   │       └── wallet.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-trustdb
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── adapters
+│   │   │   │   │   └── trustScoreDatabase.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-tts
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── constants.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── _plugin-twilio
+│   │   │   ├── examples
+│   │   │   │   └── setup.ts
+│   │   │   ├── package.json
+│   │   │   ├── src
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── twilioProvider.ts
+│   │   │   │   ├── routes
+│   │   │   │   │   ├── mediaWebSocket.ts
+│   │   │   │   │   └── twilioWebhooks.ts
+│   │   │   │   ├── server.ts
+│   │   │   │   ├── services
+│   │   │   │   │   └── twilioService.ts
+│   │   │   │   ├── start.ts
+│   │   │   │   └── types
+│   │   │   │       └── twilio.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-twitter
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── post.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── templates.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── __tests__
+│   │   │   │   └── post.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   ├── tsup.config.ts
+│   │   │   └── vitest.config.ts
+│   │   ├── plugin-udio
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── extend.ts
+│   │   │   │   │   └── generate.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── udio.ts
+│   │   │   │   └── types
+│   │   │   │       └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-video-generation
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── constants.ts
+│   │   │   │   └── index.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-web-search
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.MD
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   └── webSearch.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── services
+│   │   │   │   │   └── webSearchService.ts
+│   │   │   │   └── types.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-whatsapp
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── client.ts
+│   │   │   │   ├── handlers
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   ├── message.handler.ts
+│   │   │   │   │   └── webhook.handler.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── types.ts
+│   │   │   │   └── utils
+│   │   │   │       ├── index.ts
+│   │   │   │       └── validators.ts
+│   │   │   ├── __tests__
+│   │   │   │   ├── client.test.ts
+│   │   │   │   └── handlers
+│   │   │   │       ├── message.handler.test.ts
+│   │   │   │       └── webhook.handler.test.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-zerion
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions
+│   │   │   │   │   ├── getWalletPortfolio
+│   │   │   │   │   │   ├── examples.ts
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   └── getWalletPositions
+│   │   │   │   │       ├── examples.ts
+│   │   │   │   │       └── index.ts
+│   │   │   │   ├── constants.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── providers
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── types.ts
+│   │   │   │   └── utils.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── plugin-zilliqa
+│   │   │   ├── biome.json
+│   │   │   ├── package.json
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── actions.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── wallet.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   └── plugin-zksync-era
+│   │       ├── biome.json
+│   │       ├── package.json
+│   │       ├── README.md
+│   │       ├── src
+│   │       │   ├── actions
+│   │       │   │   ├── index.ts
+│   │       │   │   └── transferAction.ts
+│   │       │   ├── constants
+│   │       │   │   └── index.ts
+│   │       │   ├── enviroment.ts
+│   │       │   ├── hooks
+│   │       │   │   ├── index.ts
+│   │       │   │   ├── useGetAccount.ts
+│   │       │   │   └── useGetWalletClient.ts
+│   │       │   ├── index.ts
+│   │       │   └── utils
+│   │       │       ├── index.ts
+│   │       │       └── validateContext.ts
+│   │       ├── tsconfig.json
+│   │       └── tsup.config.ts
+│   ├── patches
+│   │   └── @solana-developers__helpers.patch
+│   ├── pnpm-lock.yaml
+│   ├── pnpm-workspace.yaml
+│   ├── README.md
+│   ├── renovate.json
+│   ├── scripts
+│   │   ├── bug_hunt
+│   │   │   ├── biome.json
+│   │   │   ├── config
+│   │   │   │   └── analysis.config.json
+│   │   │   ├── main.py
+│   │   │   ├── package.json
+│   │   │   ├── poetry.lock
+│   │   │   ├── pyproject.toml
+│   │   │   ├── types
+│   │   │   │   └── index.ts
+│   │   │   └── utils
+│   │   │       ├── agent.py
+│   │   │       ├── checkpoint_manager.py
+│   │   │       ├── node_manager.py
+│   │   │       └── reporting.py
+│   │   ├── clean.sh
+│   │   ├── derive-keys.js
+│   │   ├── dev.sh
+│   │   ├── docker.sh
+│   │   ├── extracttweets.js
+│   │   ├── generatecharacter.js
+│   │   ├── gettweets.mjs
+│   │   ├── integrationTests.sh
+│   │   ├── jsdoc-automation
+│   │   │   ├── package.json
+│   │   │   ├── package-lock.json
+│   │   │   ├── pnpm-lock.yaml
+│   │   │   ├── pnpm-workspace.yaml
+│   │   │   ├── README.md
+│   │   │   ├── src
+│   │   │   │   ├── AIService
+│   │   │   │   │   ├── AIService.ts
+│   │   │   │   │   ├── generators
+│   │   │   │   │   │   └── FullDocumentationGenerator.ts
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   ├── types
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   └── utils
+│   │   │   │   │       ├── CodeFormatter.ts
+│   │   │   │   │       └── DocumentOrganizer.ts
+│   │   │   │   ├── Configuration.ts
+│   │   │   │   ├── DirectoryTraversal.ts
+│   │   │   │   ├── DocumentationGenerator.ts
+│   │   │   │   ├── GitManager.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── JsDocAnalyzer.ts
+│   │   │   │   ├── JsDocGenerator.ts
+│   │   │   │   ├── JSDocValidator.ts
+│   │   │   │   ├── PluginDocumentationGenerator.ts
+│   │   │   │   ├── types
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── TypeScriptFileIdentifier.ts
+│   │   │   │   ├── TypeScriptParser.ts
+│   │   │   │   └── utils
+│   │   │   │       └── prompts.ts
+│   │   │   ├── tsconfig.json
+│   │   │   └── tsup.config.ts
+│   │   ├── lint.sh
+│   │   ├── migrateCache.js
+│   │   ├── smokeTests.sh
+│   │   ├── start.sh
+│   │   ├── test.sh
+│   │   ├── tweet_scraped_clean.json
+│   │   ├── tweet_scraped.json
+│   │   ├── update-biome-rules.mjs
+│   │   ├── update-package-access.js
+│   │   └── update-versions.js
+│   ├── SECURITY.md
+│   ├── start.sh
+│   ├── tests
+│   │   ├── README.md
+│   │   ├── test1.mjs
+│   │   └── testLibrary.mjs
+│   ├── tsconfig.json
+│   └── turbo.json
+├── front
+│   ├── components.json
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── pnpm-lock.yaml
+│   ├── README.md
+│   ├── src
+│   │   ├── App.css
+│   │   ├── App.tsx
+│   │   ├── assets
+│   │   │   └── react.svg
+│   │   ├── components
+│   │   │   ├── app-sidebar.tsx
+│   │   │   ├── calls
+│   │   │   │   ├── CallDetails.tsx
+│   │   │   │   └── CallsList.tsx
+│   │   │   ├── features
+│   │   │   │   └── emergency
+│   │   │   │       └── CallDetails.tsx
+│   │   │   └── ui
+│   │   │       ├── avatar.tsx
+│   │   │       ├── badge.tsx
+│   │   │       ├── button.tsx
+│   │   │       ├── card.tsx
+│   │   │       ├── checkbox.tsx
+│   │   │       ├── dialog.tsx
+│   │   │       ├── select.tsx
+│   │   │       ├── sidebar.tsx
+│   │   │       └── table.tsx
+│   │   ├── config
+│   │   │   └── constants.ts
+│   │   ├── data
+│   │   │   └── mockData.ts
+│   │   ├── hooks
+│   │   │   └── useEmergencyCalls.ts
+│   │   ├── index.css
+│   │   ├── lib
+│   │   │   └── utils.ts
+│   │   ├── main.tsx
+│   │   ├── pages
+│   │   │   └── Home.tsx
+│   │   ├── services
+│   │   │   └── emergencyService.ts
+│   │   ├── types
+│   │   │   └── call.ts
+│   │   └── vite-env.d.ts
+│   ├── tailwind.config.js
+│   ├── tsconfig.app.json
+│   ├── tsconfig.json
+│   ├── tsconfig.node.json
+│   └── vite.config.ts
+├── package.json
+├── package-lock.json
+├── README.md
+├── start.sh
+└── test
+
+982 directories, 3529 files
